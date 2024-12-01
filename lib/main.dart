@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -8,60 +10,123 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-     return MaterialApp(
-       debugShowCheckedModeBanner: false,
-       home: homePageActivity()
-     );
+   return MaterialApp(
+     debugShowCheckedModeBanner: false,
+     home: homeActivity(),
+   );
   }
 
 }
-class homePageActivity extends StatelessWidget{
-
-  mySnackBar(message, context){
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message))
-    );
-  }
-  const homePageActivity({super.key});
+class homeActivity extends StatelessWidget{
+  const homeActivity({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(title: Text("This is my frist App here "),
-        backgroundColor: Colors.green,
-        titleSpacing: 0,
+      appBar:  AppBar(title: Text("This is app bar"),
+        backgroundColor: Colors.blue,
         actions: [
-
-          IconButton(onPressed: (){mySnackBar("I am Comment",context); }, icon: Icon(Icons.comment),color: Colors.white,),
-          IconButton(onPressed: (){mySnackBar("I am notification",context); }, icon: Icon(Icons.notifications),color: Colors.white,),
-          IconButton(onPressed: (){mySnackBar("I am Search",context); }, icon: Icon(Icons.search),color: Colors.white,),
-
+          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.notifications)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.mail)),
         ],
-
       ),
-      floatingActionButton: FloatingActionButton(
-        elevation: 10,
-        child: Icon(Icons.add,color: Colors.white,),
-        backgroundColor: Colors.green,
-        onPressed: (){
-          mySnackBar("I am floating action button", context);
-        },
-      ),
-     // backgroundColor: Colors.blueGrey,
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
+        currentIndex: 0,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.green,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.store,color: Colors.green,),label: "Shop"),
-          BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.green,),label: "Account"),
-
+          BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart,color: Colors.blue,),label: "Cart"),
+          BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.blue,),label: "Profile"),
         ],
+      ),
+      drawer: Drawer(
+        //backgroundColor: Colors.grey,
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("Hafiz"),),
+            ListTile(leading: Icon(Icons.home),title: Text("Home",),onTap: (){},),
+            ListTile(leading: Icon(Icons.shop),title: Text("Shop"),onTap: (){}),
+            ListTile(leading: Icon(Icons.contact_mail),title: Text("Mail"),onTap: (){}),
+            ListTile(leading: Icon(Icons.person),title: Text("account"),onTap: (){}),
+            ListTile(leading: Icon(Icons.home),title: Text("Home",),onTap: (){},),
+            ListTile(leading: Icon(Icons.shop),title: Text("Shop"),onTap: (){}),
+            ListTile(leading: Icon(Icons.contact_mail),title: Text("Mail"),onTap: (){}),
+            ListTile(leading: Icon(Icons.person),title: Text("account"),onTap: (){}),
 
+          ],
+        ),
       ),
     );
   }
 
 }
+
+
+//
+// import 'package:flutter/material.dart';
+// void main(){
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatelessWidget{
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//      return MaterialApp(
+//        debugShowCheckedModeBanner: false,
+//        home: homePageActivity()
+//      );
+//   }
+//
+// }
+// class homePageActivity extends StatelessWidget{
+//
+//   mySnackBar(message, context){
+//     ScaffoldMessenger.of(context).showSnackBar(
+//       SnackBar(content: Text(message))
+//     );
+//   }
+//   const homePageActivity({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar:  AppBar(title: Text("This is my frist App here "),
+//         backgroundColor: Colors.green,
+//         titleSpacing: 0,
+//         actions: [
+//
+//           IconButton(onPressed: (){mySnackBar("I am Comment",context); }, icon: Icon(Icons.comment),color: Colors.white,),
+//           IconButton(onPressed: (){mySnackBar("I am notification",context); }, icon: Icon(Icons.notifications),color: Colors.white,),
+//           IconButton(onPressed: (){mySnackBar("I am Search",context); }, icon: Icon(Icons.search),color: Colors.white,),
+//
+//         ],
+//
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         elevation: 10,
+//         child: Icon(Icons.add,color: Colors.white,),
+//         backgroundColor: Colors.green,
+//         onPressed: (){
+//           mySnackBar("I am floating action button", context);
+//         },
+//       ),
+//      // backgroundColor: Colors.blueGrey,
+//       bottomNavigationBar: BottomNavigationBar(
+//         currentIndex: 2,
+//         items: [
+//           BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.green,),label: "Home"),
+//           BottomNavigationBarItem(icon: Icon(Icons.store,color: Colors.green,),label: "Shop"),
+//           BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.green,),label: "Account"),
+//
+//         ],
+//
+//       ),
+//     );
+//   }
+//
+// }
 
 
 
