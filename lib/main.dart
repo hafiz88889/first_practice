@@ -1,65 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 void main(){
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-     debugShowCheckedModeBanner: false,
-     home: homeActivity(),
-   );
-  }
-
-}
-class homeActivity extends StatelessWidget{
-  const homeActivity({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar:  AppBar(title: Text("This is app bar"),
-        backgroundColor: Colors.blue,
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.notifications)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.mail)),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.blue,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart,color: Colors.blue,),label: "Cart"),
-          BottomNavigationBarItem(icon: Icon(Icons.person,color: Colors.blue,),label: "Profile"),
-        ],
-      ),
-      drawer: Drawer(
-        //backgroundColor: Colors.grey,
-        child: ListView(
-          children: [
-            DrawerHeader(child: Text("Hafiz"),),
-            ListTile(leading: Icon(Icons.home),title: Text("Home",),onTap: (){},),
-            ListTile(leading: Icon(Icons.shop),title: Text("Shop"),onTap: (){}),
-            ListTile(leading: Icon(Icons.contact_mail),title: Text("Mail"),onTap: (){}),
-            ListTile(leading: Icon(Icons.person),title: Text("account"),onTap: (){}),
-            ListTile(leading: Icon(Icons.home),title: Text("Home",),onTap: (){},),
-            ListTile(leading: Icon(Icons.shop),title: Text("Shop"),onTap: (){}),
-            ListTile(leading: Icon(Icons.contact_mail),title: Text("Mail"),onTap: (){}),
-            ListTile(leading: Icon(Icons.person),title: Text("account"),onTap: (){}),
-
-          ],
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        theme :ThemeData.light(),
+      home: homeActivity(),
     );
   }
-
 }
+
 
 
 //
