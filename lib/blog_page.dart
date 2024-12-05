@@ -57,7 +57,7 @@ class blog_pageActivity extends StatelessWidget{
                  Icons.home
              ),
              title: Text(
-               "Home",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Home",style: textType
              ),
              onTap: (){
                // Navigator.push(context, MaterialPageRoute(builder: (context)=>website()));
@@ -68,7 +68,7 @@ class blog_pageActivity extends StatelessWidget{
                Icons.web,
              ),
              title: Text(
-               "Website",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Website",style: textType
              ),
              onTap: (){ },
            ),
@@ -77,7 +77,7 @@ class blog_pageActivity extends StatelessWidget{
                Icons.phone,
              ),
              title: Text(
-               "Cell",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Cell",style: textType
              ),
              onTap: (){},
            ), ListTile(
@@ -85,7 +85,7 @@ class blog_pageActivity extends StatelessWidget{
                Icons.content_copy,
              ),
              title: Text(
-               "Blog",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Blog",style: textType
              ),
              onTap: (){ },
            ), ListTile(
@@ -93,7 +93,7 @@ class blog_pageActivity extends StatelessWidget{
                Icons.contacts,
              ),
              title: Text(
-               "Contact",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Contact",style: textType
              ),
              onTap: (){ },
            ), ListTile(
@@ -101,7 +101,7 @@ class blog_pageActivity extends StatelessWidget{
                Icons.person,
              ),
              title: Text(
-               "Profile",style: TextStyle(fontSize: 14,fontFamily: "FontThird"),
+               "Profile",style: textType
              ),
              onTap: (){ },
            ),
@@ -174,7 +174,6 @@ class blog_pageActivity extends StatelessWidget{
                   TextSpan(
                     text: MyString.thirdText,
                     style: regularTextStyle.copyWith(fontSize: 14,fontWeight: FontWeight.normal,fontFamily: "normal")
-
                   ),
                 ],
               )
@@ -186,5 +185,4 @@ class blog_pageActivity extends StatelessWidget{
      ),
      );
   }
-  
 }

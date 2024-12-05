@@ -6,3 +6,8 @@ final regularTextStyle = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.bold,
 );
+
+final textType =TextStyle(
+  fontFamily: "FontThird",
+  fontSize: 14,
+);

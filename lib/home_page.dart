@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'blog_page.dart';
+import 'container_page/container_page.dart';
 
 class homeActivity extends StatefulWidget{
   const homeActivity({super.key});
@@ -32,41 +33,86 @@ class _homeActivityState extends State<homeActivity> {
       ),
 
       bottomNavigationBar: BottomNavigationBar(
-
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "Cart"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_2),label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: "Cart",),
+          BottomNavigationBarItem(icon: Icon(Icons.person_2,),label: "Profile"),
 
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        backgroundColor: Colors.white,
-        elevation: 20,
-        child: Icon(Icons.add,color: Colors.black,),
-      ),
-      body: Center(
-        child: Container(
-          child: InkWell(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
-            },
-            child: Container(
-              height: 60,
-                width: 250,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  color: Colors.deepPurpleAccent,
-                ),
-                child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 30,fontWeight: FontWeight.bold),)),
+      body: Row(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: EdgeInsets.all(10),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
+                    },
+                    child: Container(
+                      height: 40,
+                        width: 150,
+                        padding: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.yellow,
+                              blurRadius: 10,
+                            )
+                          ],
+                          color: Colors.deepPurpleAccent,
+                        ),
+                        child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
 
-                // child: Text(
-                //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                        // child: Text(
+                        //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                        ),
+
+                  ),
                 ),
+            ],
           ),
-        ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: EdgeInsets.all(10),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ContainerPage()));
+                  },
+                  child: Container(
+                    height: 40,
+                    width: 170,
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.yellow,
+                          blurRadius: 10,
+                        )
+                      ],
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    child: Center(child: Text("Go Container page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                    // child: Text(
+                    //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                  ),
+
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
+
     drawer: Drawer(
       child: ListView(
         children: [
