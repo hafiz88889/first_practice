@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:first_practice/utilis/text_style.dart';
-import 'package:first_practice/utilis/text_style.dart';
-
 class ContainerPage extends StatelessWidget {
   const ContainerPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,16 +17,16 @@ class ContainerPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                child: Center(child: Text("Bag",style: regularTextStyle.copyWith(color: Colors.white,fontSize: 25))),
+                child:  Center(child: Text("Bag",style: regularTextStyle.copyWith(color: Colors.white,fontSize: 25))),
                 height: 100,
                 width: 100,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.blue,
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.yellow,
                       blurRadius: 10.0,
@@ -43,11 +40,11 @@ class ContainerPage extends StatelessWidget {
                 width: 100,
                 padding: EdgeInsets.all(10),
                 margin: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                decoration:const BoxDecoration(
                     color: Colors.red,
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.vertical(bottom: Radius.circular(50)),
-                    boxShadow: [
+                    boxShadow:  [
                       BoxShadow(
                         color: Colors.redAccent,
                         blurRadius: 10.0,
@@ -59,9 +56,9 @@ class ContainerPage extends StatelessWidget {
                 child: Center(child: Text("Bag",style: regularTextStyle.copyWith(color: Colors.white,fontSize: 25))),
                 height: 100,
                 width: 100,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
                     color: Colors.grey,
                     shape: BoxShape.rectangle,
                     borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
@@ -243,7 +240,6 @@ class ContainerPage extends StatelessWidget {
           ),
         ],
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         items: [

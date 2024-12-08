@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'doctor_app/home_page.dart';
 import 'container_page/container_page.dart';
 import 'home_page.dart';
+import 'doctor_app/slider_page.dart';
 
 void main(){
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         theme :ThemeData.light(),
-      home: homeActivity(),
+      home: homePage(),
     );
   }
 }
