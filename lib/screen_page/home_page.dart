@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'blog_page.dart';
-import 'container_page/container_page.dart';
+import 'container_page.dart';
 
 class homeActivity extends StatefulWidget{
   const homeActivity({super.key});

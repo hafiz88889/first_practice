@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 final regularTextStyle = TextStyle(
   fontSize: 14,
-  fontFamily: "FontThird",
-  color: Colors.black,
+  color: Colors.red,
   fontWeight: FontWeight.bold,
 );
 
 final textType =TextStyle(
-  fontFamily: "FontThird",
+ // fontFamily: "FontThird",
   fontSize: 14,
 );
 final doctorExpert=TextStyle(

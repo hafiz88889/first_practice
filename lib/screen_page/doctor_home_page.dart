@@ -11,15 +11,15 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: TextField(
-          decoration: InputDecoration(
+        title: const TextField(
+          decoration: const InputDecoration(
             prefixIcon: Icon(Icons.search),
             hintText: "search"
           ),
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications),
             onPressed: (){},
           )
         ],
@@ -33,26 +33,27 @@ class _homePageState extends State<homePage> {
             padding: EdgeInsets.all(3),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(image: AssetImage("assets/images/doctor_20.JPG"),
+              image: const DecorationImage(image: AssetImage("assets/images/doctor_20.JPG"),
               fit: BoxFit.cover,
               )
             ),
           ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    child: RichText(text: TextSpan(
+                    child:  RichText(text: TextSpan(
                         text: MyString.forthText,
                         style: regularTextStyle.copyWith(fontSize: 20,),
                         children: [
                           TextSpan(
-                            text: MyString.fiftText,
+                            text: MyString.fifthText,
                             style: regularTextStyle.copyWith(fontSize: 14,color: Colors.red),
                           )
                         ]
                     )
                     ),
-                   margin: EdgeInsets.fromLTRB(15, 2, 2, 2),
+                   margin: const EdgeInsets.fromLTRB(15, 2, 2, 2),
                   ),
                 ],
               ),
@@ -61,52 +62,52 @@ class _homePageState extends State<homePage> {
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(3),
+                    margin: const EdgeInsets.all(5),
+                    padding:const EdgeInsets.all(3),
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(image: AssetImage("assets/images/1.JPG"),
+                      image:const DecorationImage(image: AssetImage("assets/images/1.JPG"),
                       fit: BoxFit.cover,
                       )
                     ),
                     
                   ),
                   Container(
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(3),
+                    margin: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(3),
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(image: AssetImage("assets/images/2.JPG"),
+                        image: const DecorationImage(image: AssetImage("assets/images/2.JPG"),
                           fit: BoxFit.cover,
                         )
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(3),
+                    margin: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(3),
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(image: AssetImage("assets/images/3.jpg"),
+                        image: const DecorationImage(image: AssetImage("assets/images/3.jpg"),
                           fit: BoxFit.cover,
                         )
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.all(3),
+                    margin: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(3),
                     height: 80,
                     width: 80,
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(image: AssetImage("assets/images/doctor.jpg"),
+                        image: const DecorationImage(image: AssetImage("assets/images/doctor.jpg"),
                           fit: BoxFit.cover,
                         )
                     ),
@@ -116,19 +117,19 @@ class _homePageState extends State<homePage> {
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(15, 0, 2, 2),
+                    margin: const EdgeInsets.fromLTRB(15, 0, 2, 2),
                   child: Text("Medicine \n Expert",style: doctorExpert,),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(20, 0, 2, 2),
+                    margin: const EdgeInsets.fromLTRB(20, 0, 2, 2),
                     child: Text("Dentist \n Expert",style:doctorExpert,),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(40, 0, 2, 2),
+                    margin: const EdgeInsets.fromLTRB(40, 0, 2, 2),
                     child: Text("Neuro \n Expert",style: doctorExpert,),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(50, 0, 2, 2),
+                    margin: const EdgeInsets.fromLTRB(50, 0, 2, 2),
                     child: Text("Eye \n Expert",style: doctorExpert,),
                   ),
                 ],
@@ -139,7 +140,7 @@ class _homePageState extends State<homePage> {
           Row(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(20, 5, 0, 0),
+                margin: const EdgeInsets.fromLTRB(20, 5, 0, 0),
               child:Text("Available Doctor",style: regularTextStyle.copyWith(fontSize: 20),),
               )
             ],
@@ -151,36 +152,36 @@ class _homePageState extends State<homePage> {
                   children: [
                     Card(
                       child: ListTile(
-                        leading: CircleAvatar(
+                        leading: const CircleAvatar(
                           backgroundImage: NetworkImage("https://imgs.search.brave.com/-WAL0mmwzCX40ZP5lbt99NTBXtmCp20GjINaUoVWwuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/MjAxNTIxNC9waG90/by9wb3J0cmFpdC1m/ZW1hbGUtZG9jdG9y/LXN0b2NrLXBob3Rv/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ucjRYYVduUlBR/bldxd2h6YWhhalpo/c2tJREcxeUs5RG1J/dGVWNWdwVU9JPQ"),
                         ),
                        title: Text("Jacob Jones",style: doctorExpert.copyWith(fontSize: 16),),
-                        subtitle: Text("Dental Surgeon"),
+                        subtitle: const Text("Dental Surgeon"),
                         trailing: ElevatedButton(onPressed: (){},
-                            child: Text("Book Appoinment")
+                            child:const Text("Book Appointment")
                         ),
                       ),
                     ),
                     Card(
                       child: ListTile(
-                        leading: CircleAvatar(
+                        leading: const CircleAvatar(
                           backgroundImage: AssetImage("assets/images/3.jpg"),
                         ),
                         title: Text("John Albert",style: doctorExpert.copyWith(fontSize: 16),),
-                        subtitle: Text("Medicin Surgeon"),
+                        subtitle:const Text("Medicine Surgeon"),
                         trailing: ElevatedButton(onPressed: (){},
-                            child: Text("Book Appoinment")),
+                            child:const Text("Book Appointment")),
                       ),
                     ),
                     Card(
                       child: ListTile(
-                        leading: CircleAvatar(
+                        leading:const CircleAvatar(
                           backgroundImage: AssetImage("assets/images/doctor.jpg"),
                         ),
                         title: Text("Alexander",style: doctorExpert.copyWith(fontSize: 16),),
-                        subtitle: Text("Neuro Surgeon"),
+                        subtitle:const Text("Neuron Surgeon"),
                         trailing: ElevatedButton(onPressed: (){},
-                            child: Text("Book Appoinment")
+                            child:const Text("Book Appointment")
                         ),
                       ),
                     ),
@@ -192,7 +193,7 @@ class _homePageState extends State<homePage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.book_online_sharp),label: "Booking"),
           BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'utilis/text_style.dart';
-import 'utilis/text.dart';
+import '../utilis/text_style.dart';
+import '../utilis/text.dart';
 class blog_pageActivity extends StatelessWidget{
   const blog_pageActivity({super.key});
 
