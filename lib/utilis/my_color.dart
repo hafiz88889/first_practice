@@ -9,4 +9,6 @@ class MyColor{
   static Color blackColor =Colors.black;
   static Color whiteColor =Colors.white;
   static Color pinkAccent =Colors.pinkAccent;
+  static Color yellowColor = Colors.yellow;
+  static Color orangeColor = Colors.orange;
 }

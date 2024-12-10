@@ -99,7 +99,7 @@ class RowClass extends StatelessWidget {
                     widget2(
                       params: "second Text",
                     ),
-                    Icon(Icons.settings,size: 30,color: Colors.white,)
+                    Icon(Icons.home,size: 30,color: Colors.white,)
                   ],
                 )
 
@@ -125,9 +125,9 @@ class RowClass extends StatelessWidget {
                     ),
                     //SizedBox(width: 10,),
                     widget2(
-                      params: "second Text",
+                      params: "আমাদের দেশের নাম বাংলাদেশ",
                     ),
-                    Icon(Icons.settings,size: 30,color: Colors.white,)
+                    Icon(Icons.person,size: 30,color: Colors.white,)
                   ],
                 )
 

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'screen_page/assignment_page_one.dart';
 import 'row_widget/first_row_page.dart';
 import 'screen_page/doctor_home_page.dart';
 import 'screen_page/container_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         theme :ThemeData.light(),
-      home: RowClass(),
+      home: BusPage(),
     );
   }
 }
