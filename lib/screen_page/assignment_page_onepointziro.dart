@@ -1,7 +1,9 @@
-import 'package:first_practice/utilis/my_color.dart';
+import 'package:first_practice/utils/my_color.dart';
 import 'package:flutter/material.dart';
-import 'package:first_practice/utilis/text_style.dart';
+import 'package:first_practice/utils/text_style.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:first_practice/utils/image_custom_widget.dart';
+import 'package:first_practice/utils/text.dart';
 
 class messanger_page extends StatefulWidget {
   const messanger_page({super.key});
@@ -75,7 +77,6 @@ class _messanger_pageState extends State<messanger_page> {
                           Text("Invite friend",style: regularTextStyle.copyWith(color: MyColor.whiteColor),),
                         ],
                       ),
-
                     ),
                   ),
                 ),
@@ -101,7 +102,7 @@ class _messanger_pageState extends State<messanger_page> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(5),
+                  padding:const EdgeInsets.all(5),
                   child: InkWell(
                     onTap: (){},
                     child: Container(
@@ -149,145 +150,105 @@ class _messanger_pageState extends State<messanger_page> {
           Column(
             children: [
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
               Card(
+                color: MyColor.whiteColor,
                 child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
+                  leading:  CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.myImage8),
                   ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
+                  title: Text(MyString.sevethText,style: doctorExpert.copyWith(fontSize: 16),),
+                  subtitle:  Text(MyString.eithtText),
+                  trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
               ),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
-                  ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
-                  ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
-                  ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
-                  ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
-                ),
-              ),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/me.JPG"),
-                  ),
-                  title: Text("Md Hafiz",style: doctorExpert.copyWith(fontSize: 16),),
-                  subtitle: const Text("Hey! Are You to work late"),
-                  trailing: Text("12:23",style: regularTextStyle,),
-                ),
-              ),
+
 
             ],
           ),
@@ -295,6 +256,7 @@ class _messanger_pageState extends State<messanger_page> {
       ),
       ),
       bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: MyColor.blueColor,
         items:const [
           Icon(Icons.home,size: 30,),
           Icon(Icons.shopping_cart,size: 30,),

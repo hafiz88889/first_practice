@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:first_practice/utilis/text_style.dart';
-import 'package:first_practice/utilis/text.dart';
+import 'package:first_practice/utils/text_style.dart';
+import 'package:first_practice/utils/text.dart';
 class homePage extends StatefulWidget {
   const homePage({super.key});
   @override
@@ -24,7 +24,15 @@ class _homePageState extends State<homePage> {
           )
         ],
       ),
-      body: Column(
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.book_online_sharp),label: "Booking"),
+            BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
+          ],
+        ),
+      body:SingleChildScrollView(
+     child:  Column(
         children: [
           Container(
             height: 250,
@@ -42,7 +50,7 @@ class _homePageState extends State<homePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                    child:  RichText(text: TextSpan(
+                    child: RichText(text: TextSpan(
                         text: MyString.forthText,
                         style: regularTextStyle.copyWith(fontSize: 20,),
                         children: [
@@ -51,7 +59,7 @@ class _homePageState extends State<homePage> {
                             style: regularTextStyle.copyWith(fontSize: 14,color: Colors.red),
                           )
                         ]
-                    )
+                    ),
                     ),
                    margin: const EdgeInsets.fromLTRB(15, 2, 2, 2),
                   ),
@@ -185,6 +193,54 @@ class _homePageState extends State<homePage> {
                         ),
                       ),
                     ),
+                    Card(
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: NetworkImage("https://imgs.search.brave.com/-WAL0mmwzCX40ZP5lbt99NTBXtmCp20GjINaUoVWwuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/MjAxNTIxNC9waG90/by9wb3J0cmFpdC1m/ZW1hbGUtZG9jdG9y/LXN0b2NrLXBob3Rv/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ucjRYYVduUlBR/bldxd2h6YWhhalpo/c2tJREcxeUs5RG1J/dGVWNWdwVU9JPQ"),
+                        ),
+                        title: Text("Jacob Jones",style: doctorExpert.copyWith(fontSize: 16),),
+                        subtitle: const Text("Dental Surgeon"),
+                        trailing: ElevatedButton(onPressed: (){},
+                            child:const Text("Book Appointment")
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: NetworkImage("https://imgs.search.brave.com/-WAL0mmwzCX40ZP5lbt99NTBXtmCp20GjINaUoVWwuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/MjAxNTIxNC9waG90/by9wb3J0cmFpdC1m/ZW1hbGUtZG9jdG9y/LXN0b2NrLXBob3Rv/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ucjRYYVduUlBR/bldxd2h6YWhhalpo/c2tJREcxeUs5RG1J/dGVWNWdwVU9JPQ"),
+                        ),
+                        title: Text("Jacob Jones",style: doctorExpert.copyWith(fontSize: 16),),
+                        subtitle: const Text("Dental Surgeon"),
+                        trailing: ElevatedButton(onPressed: (){},
+                            child:const Text("Book Appointment")
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: NetworkImage("https://imgs.search.brave.com/-WAL0mmwzCX40ZP5lbt99NTBXtmCp20GjINaUoVWwuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/MjAxNTIxNC9waG90/by9wb3J0cmFpdC1m/ZW1hbGUtZG9jdG9y/LXN0b2NrLXBob3Rv/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ucjRYYVduUlBR/bldxd2h6YWhhalpo/c2tJREcxeUs5RG1J/dGVWNWdwVU9JPQ"),
+                        ),
+                        title: Text("Jacob Jones",style: doctorExpert.copyWith(fontSize: 16),),
+                        subtitle: const Text("Dental Surgeon"),
+                        trailing: ElevatedButton(onPressed: (){},
+                            child:const Text("Book Appointment")
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: NetworkImage("https://imgs.search.brave.com/-WAL0mmwzCX40ZP5lbt99NTBXtmCp20GjINaUoVWwuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/MjAxNTIxNC9waG90/by9wb3J0cmFpdC1m/ZW1hbGUtZG9jdG9y/LXN0b2NrLXBob3Rv/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1ucjRYYVduUlBR/bldxd2h6YWhhalpo/c2tJREcxeUs5RG1J/dGVWNWdwVU9JPQ"),
+                        ),
+                        title: Text("Jacob Jones",style: doctorExpert.copyWith(fontSize: 16),),
+                        subtitle: const Text("Dental Surgeon"),
+                        trailing: ElevatedButton(onPressed: (){},
+                            child:const Text("Book Appointment")
+                        ),
+                      ),
+                    ),
                   ],
                 )
               ],
@@ -192,13 +248,10 @@ class _homePageState extends State<homePage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.book_online_sharp),label: "Booking"),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
-        ],
-      ),
+
+
+      )
+
     );
   }
 }

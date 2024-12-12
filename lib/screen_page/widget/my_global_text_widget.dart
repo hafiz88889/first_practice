@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_practice/utilis/text_style.dart';
+import 'package:first_practice/utils/text_style.dart';
 class globalWidgetText extends StatelessWidget {
   final String params;
   const globalWidgetText({super.key,required this.params});
@@ -11,9 +11,9 @@ class globalWidgetText extends StatelessWidget {
 }
 
 
-class widget2 extends StatelessWidget {
+class widget extends StatelessWidget {
   final String params;
-  const widget2({super.key,required this.params});
+  const widget({super.key,required this.params});
 
   @override
   Widget build(BuildContext context) {

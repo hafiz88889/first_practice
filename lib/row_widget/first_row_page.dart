@@ -40,7 +40,7 @@ class RowClass extends StatelessWidget {
                         params: "First Text",
                       ),
                       //SizedBox(width: 10,),
-                      widget2(
+                      widget(
                         params: "second Text",
                       ),
                       Icon(Icons.settings,size: 30,color: Colors.white,)
@@ -69,7 +69,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.settings,size: 30,color: Colors.white,)
@@ -96,7 +96,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.home,size: 30,color: Colors.white,)
@@ -124,7 +124,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "আমাদের দেশের নাম বাংলাদেশ",
                     ),
                     Icon(Icons.person,size: 30,color: Colors.white,)
@@ -152,7 +152,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.settings,size: 30,color: Colors.white,)
@@ -180,7 +180,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.settings,size: 30,color: Colors.white,)
@@ -208,7 +208,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.settings,size: 30,color: Colors.white,)
@@ -236,7 +236,7 @@ class RowClass extends StatelessWidget {
                       params: "First Text",
                     ),
                     //SizedBox(width: 10,),
-                    widget2(
+                    widget(
                       params: "second Text",
                     ),
                     Icon(Icons.settings,size: 30,color: Colors.white,)

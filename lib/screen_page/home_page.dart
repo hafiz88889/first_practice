@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'blog_page.dart';
 import 'container_page.dart';
-
+import 'package:first_practice/screen_page/doctor_home_page.dart';
+import 'package:first_practice/screen_page/assignment_page_onepointziro.dart';
+import 'package:first_practice/screen_page/assignment_page_one.dart';
 class homeActivity extends StatefulWidget{
   const homeActivity({super.key});
 
@@ -40,7 +42,8 @@ class _homeActivityState extends State<homeActivity> {
 
         ],
       ),
-      body: Column(
+      body: SingleChildScrollView(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
@@ -56,11 +59,11 @@ class _homeActivityState extends State<homeActivity> {
                       padding: EdgeInsets.all(10),
                         child: InkWell(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
                           },
                           child: Container(
                             height: 40,
-                              width: 150,
+                              width: 200,
                               padding: EdgeInsets.all(10),
                               margin: EdgeInsets.all(5),
                               decoration: BoxDecoration(
@@ -73,28 +76,107 @@ class _homeActivityState extends State<homeActivity> {
                                 ],
                                 color: Colors.deepPurpleAccent,
                               ),
-                              child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-
-                              // child: Text(
-                              //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                              child: Center(child: Text("Go Doctor Appoinment Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
                               ),
 
                         ),
-                      ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
+                    ),
                     Container(
                       padding: EdgeInsets.all(10),
                       child: InkWell(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ContainerPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>BusPage()));
                         },
                         child: Container(
                           height: 40,
-                          width: 170,
+                          width: 200,
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.yellow,
+                                blurRadius: 10,
+                              )
+                            ],
+                            color: Colors.deepPurpleAccent,
+                          ),
+                          child: Center(child: Text("Go Bus Bokking Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                          // child: Text(
+                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                        ),
+
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>messanger_page()));
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 200,
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.yellow,
+                                blurRadius: 10,
+                              )
+                            ],
+                            color: Colors.deepPurpleAccent,
+                          ),
+                          child: Center(child: Text("Go Massanger Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                          // child: Text(
+                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                        ),
+
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
+                        },
+                        child: Container(
+                          height: 40,
+                          width: 200,
+                          padding: EdgeInsets.all(10),
+                          margin: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.yellow,
+                                blurRadius: 10,
+                              )
+                            ],
+                            color: Colors.deepPurpleAccent,
+                          ),
+                          child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                          // child: Text(
+                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+                        ),
+
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ContainerPageOne()));
+                        },
+                        child: Container(
+                          height: 40,
+                          width:200,
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(5),
                           decoration: BoxDecoration(
@@ -117,10 +199,12 @@ class _homeActivityState extends State<homeActivity> {
                     ),
                   ],
                 ),
+
               ],
             ),
           ),
         ],
+      ),
       ),
 
     drawer: Drawer(

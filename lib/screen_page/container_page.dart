@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:first_practice/utilis/text_style.dart';
-class ContainerPage extends StatelessWidget {
-  const ContainerPage({super.key});
+import 'package:first_practice/utils/text_style.dart';
+class ContainerPageOne extends StatelessWidget {
+  const ContainerPageOne({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +11,8 @@ class ContainerPage extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       backgroundColor: Colors.black,
-      body: Row(
+      body:SingleChildScrollView(
+      child: Row(
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -240,15 +241,17 @@ class ContainerPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_box),label: "Profile"),
+      )
+     // bottomNavigationBar: BottomNavigationBar(
+     //    currentIndex: 0,
+     //    items: [
+     //      BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+     //      BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search"),
+     //      BottomNavigationBarItem(icon: Icon(Icons.account_box),label: "Profile"),
+     //
+     //    ],
+     //  ),
 
-        ],
-      ),
     );
 
   }

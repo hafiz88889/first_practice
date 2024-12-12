@@ -1,7 +1,8 @@
+import 'package:first_practice/utils/my_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../utilis/text_style.dart';
-import '../utilis/text.dart';
+import '../utils/text_style.dart';
+import '../utils/text.dart';
 class blog_pageActivity extends StatelessWidget{
   const blog_pageActivity({super.key});
 
@@ -35,13 +36,13 @@ class blog_pageActivity extends StatelessWidget{
              padding: EdgeInsets.all(0),
              child: UserAccountsDrawerHeader(
                  currentAccountPicture: Image.network("https://imgs.search.brave.com/MZ0Wb249179mqXcBvWgsuiY2gUSZaTr1PV2pzmMZr78/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5naXRlbS5jb20v/cGltZ3MvbS80MDQt/NDA0MjcxMF9jaXJj/bGUtcHJvZmlsZS1w/aWN0dXJlLXBuZy10/cmFuc3BhcmVudC1w/bmcucG5n",),
-                 accountName: Text("Md Alam",
+                 accountName: const Text("Md Alam",
                    style: TextStyle(
                        fontFamily: "FontThird",
                        fontWeight:FontWeight.bold,
                        color: Colors.white,fontSize: 20),
                  ),
-                 accountEmail: Text(
+                 accountEmail:const  Text(
                    "info@gmail.com",
                    style: TextStyle(
                        fontFamily: "FontThird",
@@ -116,7 +117,8 @@ class blog_pageActivity extends StatelessWidget{
          BottomNavigationBarItem(icon: Icon(Icons.settings),label: "Setting"),
        ],
      ),
-     body: Column(
+     body: SingleChildScrollView(
+    child:  Column(
        children: [
          Column(
            children: [
@@ -143,14 +145,13 @@ class blog_pageActivity extends StatelessWidget{
                width: 350,
                  child: RichText(text: TextSpan(
                    text: MyString.fristText,
-                     style: regularTextStyle.copyWith(fontSize: 20,),
+                     style: regularTextStyle.copyWith(fontSize: 20,color: MyColor.blackColor),
                    children: [
                      TextSpan(
                        text: MyString.secondText,
                        style: regularTextStyle.copyWith(fontSize: 16,color: Colors.red),
                      )
                    ]
-
                  )
                  ),
                ),
@@ -183,6 +184,7 @@ class blog_pageActivity extends StatelessWidget{
          ),
        ],
      ),
-     );
+     )
+   );
   }
 }
