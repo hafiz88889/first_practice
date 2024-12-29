@@ -20,10 +20,11 @@ class CheckBoxWidget extends StatefulWidget{
 }
 
 class _CheckBoxWidgetState extends State<CheckBoxWidget> {
-  bool _value= false;
-  bool _value1= false;
-  bool _value2= false;
-  bool _value3= false;
+ bool _value=false;
+ bool _value1=false;
+ bool _value2=false;
+ bool _value3=false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,6 +45,7 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
                       activeColor: MyColor.blueColor,
                       checkColor: MyColor.whiteColor,
                       value: _value,
+
                       onChanged: (newvalue) {
                         setState(() {
                           _value = newvalue!;

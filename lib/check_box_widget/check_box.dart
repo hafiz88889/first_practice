@@ -1,4 +1,5 @@
 import 'package:first_practice/global_widget/check_box_widget.dart';
+import 'package:first_practice/radio_button/radio_button_page.dart';
 import 'package:first_practice/utils/my_color.dart';
 import 'package:first_practice/utils/text_style.dart';
 import 'package:flutter/material.dart';
@@ -23,36 +24,30 @@ class _CheckBoxState extends State<CheckBox> {
           child: Column(
             children: [
               const CheckBoxWidget(
-                title1: "What is your Country Name?",
-                title2: "Bangladesh",
-                title3: "India",
-                title4: "Nepal",
-                title5: "Butan",
+                title1: "Which singer like you?",
+                title2: "James",
+                title3: "Pritom",
+                title4: "Zeffer",
+                title5: "Tahsan",
               ),
               const CheckBoxWidget(
-                  title1: "Your Religion?",
-                  title2: "Islam",
-                  title3: "Hindu",
-                  title4: "Cristian",
-                  title5: "Chakma"),
+                  title1: "Which Brand Shoes Like you?",
+                  title2: "Bata",
+                  title3: "Apex",
+                  title4: "Data",
+                  title5: "Something"),
               const CheckBoxWidget(
-                  title1: "In what year did Bangladesh gain independence?",
-                  title2: "1971",
-                  title3: "1970",
-                  title4: "1969",
-                  title5: "1975"),
+                  title1: "What you want visit which country?",
+                  title2: "Singapure",
+                  title3: "Nepal",
+                  title4: "Maldwip",
+                  title5: "Srilanka"),
               const CheckBoxWidget(
-                  title1: "How many deviation in Bangladesh?",
-                  title2: "5",
-                  title3: "11",
-                  title4: "8",
-                  title5: "7"),
-              const CheckBoxWidget(
-                  title1: "How many Public University In Bangladesh ?",
-                  title2: "55",
-                  title3: "40",
-                  title4: "60",
-                  title5: "65"),
+                  title1: "What band phone are you using?",
+                  title2: "Vivo",
+                  title3: "Apple",
+                  title4: "Xaomi",
+                  title5: "Realme"),
               CheckboxListTile(
                 title: Text('Accept Terms and Conditions',
                     style:
@@ -73,7 +68,7 @@ class _CheckBoxState extends State<CheckBox> {
                 // Rounded corners
                 //controlAffinity: ListTileControlAffinity.leading,
               ),
-              SizedBox(height: 20,),
+             const SizedBox(height: 20,),
               SizedBox(
                 height: 50,
                   width: 350,
@@ -82,7 +77,9 @@ class _CheckBoxState extends State<CheckBox> {
                           style: ButtonStyle(backgroundColor: WidgetStateProperty.all(MyColor.burgeboxColor),
                           shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
                           ),
-                          onPressed: () {}, child: Text("Submit",style: regularTextStyle.copyWith(color: MyColor.whiteColor),)))
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const RadioButtonPage()));
+                          }, child: Text("Submit",style: regularTextStyle.copyWith(color: MyColor.whiteColor),)))
             ],
           ),
         ));
