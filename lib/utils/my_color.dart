@@ -16,9 +16,16 @@ class MyColor{
   static Color walletTextColor= const Color(0xff391C70);
   static Color cardColor= const Color(0xff824BDD);
   static Color activityTextColor = const Color(0xff3B1970);
-  static Color recivedmoneyTextColor = const Color(0xff26AC3B);
-  static Color sendmoneyTextColor = const Color(0xff845EC1);
-  static Color boxShadowColor = const Color(0xffF8F5FC);
+  static Color recivedMoneyTextColor = const Color(0xff26AC3B);
+  static Color sendMoneyTextColor = const Color(0xff845EC1);
+  static Color burgeboxColor = const Color(0xffFF8C00);
+  static Color americal = const Color(0xff5AC8FA);
+  static Color pizzaColor = const Color(0xff5856D6);
+  static Color burbean = const Color(0xffFF3B30);
+  static Color rattingColor = const Color(0xffFFCC00);
+  static Color freeDeliveryBoxColor = const Color(0xffFFC107);
+  static Color freeDeliveryTextColor = const Color(0xff424242);
+  static Color boxShadowColor = const Color(0xffD8D8D8);
 
 
 }

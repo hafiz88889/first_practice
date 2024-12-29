@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 final regularTextStyle = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.bold,
+  color: Colors.black
 );
 
 final textType =TextStyle(

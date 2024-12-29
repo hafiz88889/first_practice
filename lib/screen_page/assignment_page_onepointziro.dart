@@ -181,6 +181,7 @@ class _messanger_pageState extends State<messanger_page> {
                   subtitle:  Text(MyString.eithtText),
                   trailing: Text(MyString.sixthText,style: regularTextStyle,),
                 ),
+
               ),
               Card(
                 color: MyColor.whiteColor,

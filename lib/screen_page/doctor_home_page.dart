@@ -46,24 +46,16 @@ class _homePageState extends State<homePage> {
               )
             ),
           ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    child: RichText(text: TextSpan(
-                        text: MyString.forthText,
-                        style: regularTextStyle.copyWith(fontSize: 20,),
-                        children: [
-                          TextSpan(
-                            text: MyString.fifthText,
-                            style: regularTextStyle.copyWith(fontSize: 14,color: Colors.red),
-                          )
-                        ]
-                    ),
-                    ),
-                   margin: const EdgeInsets.fromLTRB(15, 2, 2, 2),
-                  ),
-                ],
+              Container(
+                margin: EdgeInsets.all(5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children:[
+                    
+                    Text("Categoties",style: regularTextStyle.copyWith(fontSize: 20,),),
+                    Text("see more",style: regularTextStyle.copyWith(fontSize: 14,color: Colors.red),)
+                  ],
+                ),
               ),
           Column(
             children: [
@@ -91,7 +83,7 @@ class _homePageState extends State<homePage> {
                       borderRadius: BorderRadius.circular(10),
                         image: const DecorationImage(image: AssetImage("assets/images/2.JPG"),
                           fit: BoxFit.cover,
-                        )
+                        ),
                     ),
                   ),
                   Container(

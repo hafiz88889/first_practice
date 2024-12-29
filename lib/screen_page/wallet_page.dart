@@ -7,7 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({super.key});
-
   @override
   State<WalletPage> createState() => _WalletPageState();
 }
@@ -25,7 +24,7 @@ class _WalletPageState extends State<WalletPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
-                    Icons.menu,
+                    Icons.arrow_back,
                     color: MyColor.greyColor,
                   ),
                   Text(
@@ -62,7 +61,7 @@ class _WalletPageState extends State<WalletPage> {
                       height: 5,
                     ),
                     Text(
-                      "1,504.21",
+                      "\$ 1,504.21",
                       style: regularTextStyle.copyWith(
                           color: MyColor.whiteColor,
                           fontSize: 25,
@@ -90,13 +89,13 @@ class _WalletPageState extends State<WalletPage> {
                             ),
                             Row(
                               children: [
-                                Text("SAMART SHARPY",
+                                Text("MD HAFIZUR RAHMAN",
                                     style: regularTextStyle.copyWith(
                                         fontSize: 15,
                                         color: MyColor.whiteColor,
                                         fontWeight: FontWeight.w400)),
                                 const SizedBox(
-                                  width: 130,
+                                  width: 110,
                                 ),
                                 SvgPicture.asset(
                                   MyImage.visaIcon,
@@ -259,7 +258,7 @@ class _WalletPageState extends State<WalletPage> {
                         Text(
                           "+200.00",
                           style: regularTextStyle.copyWith(
-                              color: MyColor.recivedmoneyTextColor,
+                              color: MyColor.recivedMoneyTextColor,
                               fontSize: 18),
                         ),
                         Text(
@@ -324,9 +323,9 @@ class _WalletPageState extends State<WalletPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "+200.00",
+                          "-200.00",
                           style: regularTextStyle.copyWith(
-                              color: MyColor.sendmoneyTextColor, fontSize: 18),
+                              color: MyColor.sendMoneyTextColor, fontSize: 18),
                         ),
                         Text(
                           "2 hrs ago",
@@ -353,7 +352,8 @@ class _WalletPageState extends State<WalletPage> {
                     borderRadius: BorderRadius.circular(10)),
                 child: Row(
                   children: [
-                    const Padding(padding: EdgeInsets.all(10)),
+                    SizedBox(width: 15,),
+                    //const Padding(padding: EdgeInsets.all(10)),
                     SvgPicture.asset(
                       MyImage.sendMoneyIcon,
                       height: 50,
@@ -368,7 +368,7 @@ class _WalletPageState extends State<WalletPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Send Money",
+                          "Send-Money",
                           style: regularTextStyle.copyWith(
                               color: MyColor.cardColor,
                               fontSize: 18,
@@ -390,9 +390,9 @@ class _WalletPageState extends State<WalletPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "+200.00",
+                          "-200.00",
                           style: regularTextStyle.copyWith(
-                              color: MyColor.sendmoneyTextColor, fontSize: 18),
+                              color: MyColor.sendMoneyTextColor, fontSize: 18),
                         ),
                         Text(
                           "2 hrs ago",
@@ -458,7 +458,7 @@ class _WalletPageState extends State<WalletPage> {
                         Text(
                           "+200.00",
                           style: regularTextStyle.copyWith(
-                              color: MyColor.recivedmoneyTextColor,
+                              color: MyColor.recivedMoneyTextColor,
                               fontSize: 18),
                         ),
                         Text(
