@@ -26,6 +26,7 @@ class MyColor{
   static Color freeDeliveryBoxColor = const Color(0xffFFC107);
   static Color freeDeliveryTextColor = const Color(0xff424242);
   static Color boxShadowColor = const Color(0xffD8D8D8);
+  static Color deepgreen = const Color(0xff006B51);
 
 
 }
