@@ -11,5 +11,8 @@ static String musi1c="assets/images/design.png";
 static String meetup="assets/images/meetup.jpg";
 static String love="assets/images/love.png";
 static String bigBanner="assets/images/big banner.jpg";
+static String phone="assets/images/phone-call.png";
+static String directions="assets/images/direction.png";
+static String ticket="assets/images/tiket.png";
 
 }

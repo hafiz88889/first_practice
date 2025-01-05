@@ -33,6 +33,8 @@ class MyColor{
   static Color searchText = const Color(0xff80838A);
   static Color backgroundColor = const Color(0xffF7F7F7);
   static Color circleBox = const Color(0xffEAEDF2);
+  static Color deepOrange = const Color(0xffFDC10B);
+  static Color deepBlue = const Color(0xff3F81FB);
 
 
 }
