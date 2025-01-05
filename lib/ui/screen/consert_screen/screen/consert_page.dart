@@ -445,7 +445,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                   CrossAxisAlignment
                                                                       .start,
                                                               children: [
-                                                                SizedBox(height: 50,),
+                                                                const SizedBox(height: 50,),
                                                                 Text(
                                                                   "Shere Bangla Consert",
                                                                   style: regularTextStyle18
@@ -639,7 +639,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                         ),
                                                                       ],
                                                                     ),
-                                                                    Spacer(),
+                                                                    const Spacer(),
                                                                     Icon(
                                                                       Icons
                                                                           .message,
@@ -686,7 +686,8 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                           style:
                                                                               regularTextStyle14.copyWith(color: MyColor.eSeeAll),
                                                                         )
-                                                                      ]),
+                                                                      ],
+                                                                  ),
                                                                 ),
                                                               ],
                                                             ),
@@ -696,7 +697,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                             right :30,
                                                             bottom: 450,
                                                             child: Container(
-                                                              padding: EdgeInsets.all(15),
+                                                              padding: const EdgeInsets.all(15),
                                                               height: 110,
                                                               decoration: BoxDecoration(
                                                                 borderRadius: BorderRadius.circular(15),
@@ -738,7 +739,8 @@ class _ConsertPageState extends State<ConsertPage> {
                               "CHOICE YOUR SEAT",
                               style: regularTextStyle16.copyWith(
                                   color: MyColor.whiteColor),
-                            )),
+                            ),
+                        ),
                       )
                     ],
                   ),
@@ -748,6 +750,7 @@ class _ConsertPageState extends State<ConsertPage> {
           ),
         ],
       ),
-    ));
+    ),
+    );
   }
 }

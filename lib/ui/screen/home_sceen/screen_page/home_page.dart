@@ -97,8 +97,8 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              height: 50,
+                            SizedBox(
+                              height: 49,
                               width: 270,
                               child: TextField(
                                 decoration: InputDecoration(
