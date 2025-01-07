@@ -35,6 +35,8 @@ class MyColor{
   static Color circleBox = const Color(0xffEAEDF2);
   static Color deepOrange = const Color(0xffFDC10B);
   static Color deepBlue = const Color(0xff3F81FB);
+  static Color backgroundColor1 = const Color(0xffF5F5F5);
+  static Color backgroundColor2 = const Color(0xffFF6F6F6);
 
 
 }

@@ -2,6 +2,8 @@ import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
+import 'package:event/ui/screen/messanger_screen/screen_page/messanger_page.dart';
+import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
 class ConsertPage extends StatefulWidget {
@@ -15,152 +17,156 @@ class _ConsertPageState extends State<ConsertPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(MyImage.bigBanner),
-                        fit: BoxFit.cover)),
-              ),
-              Positioned(
-                left: 30,
-                top: 40,
-                child: Row(
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.expand_circle_down_rounded,
-                        color: MyColor.whiteColor,
-                        size: 50,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 250,
-                    ),
-                    Icon(
-                      Icons.heart_broken,
-                      color: MyColor.redColor,
-                      size: 50,
-                    )
-                  ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(MyImage.bigBanner),
+                          fit: BoxFit.cover)),
                 ),
-              ),
-              Positioned(
-                top: 600,
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Column(
+                Positioned(
+                  left: 30,
+                  top: 40,
+                  child: Row(
                     children: [
-                      Text(
-                        "Shere Bangla Brand \nMusic Consert",
-                        style: regularTextStyle18.copyWith(
-                            color: MyColor.whiteColor, fontSize: 30),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.expand_circle_down_rounded,
+                          color: MyColor.whiteColor,
+                          size: 50,
+                        ),
                       ),
                       const SizedBox(
-                        height: 15,
+                        width: 250,
                       ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.location_on,
-                            color: MyColor.eSeeAll,
-                            size: 20,
-                          ),
-                          Text(
-                            "ABC Avinue Dhaka,1212",
-                            style: regularTextStyle14.copyWith(
-                                color: MyColor.whiteColor, fontSize: 12),
-                          ),
-                          const SizedBox(
-                            width: 25,
-                          ),
-                          Image(
-                            image: AssetImage(MyImage.dateIcon),
-                            height: 20,
-                            width: 20,
-                            color: MyColor.eSeeAll,
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Text("25-27 October 22",
-                              style: regularTextStyle14.copyWith(fontSize: 12))
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        //mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              CircleAvatar(
-                                radius: 12,
-                                backgroundImage: AssetImage(MyImage.profile),
-                              ),
-                              Positioned(
-                                left: 15,
-                                child: CircleAvatar(
+                      Icon(
+                        Icons.heart_broken,
+                        color: MyColor.redColor,
+                        size: 50,
+                      )
+                    ],
+                  ),
+                ),
+                Positioned(
+                  top: 600,
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Shere Bangla Brand \nMusic Consert",
+                          style: regularTextStyle18.copyWith(
+                              color: MyColor.whiteColor, fontSize: 30),
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.location_on,
+                              color: MyColor.eSeeAll,
+                              size: 20,
+                            ),
+                            Text(
+                              "ABC Avinue Dhaka,1212",
+                              style: regularTextStyle14.copyWith(
+                                  color: MyColor.whiteColor, fontSize: 12),
+                            ),
+                            const SizedBox(
+                              width: 25,
+                            ),
+                            Image(
+                              image: AssetImage(MyImage.dateIcon),
+                              height: 20,
+                              width: 20,
+                              color: MyColor.eSeeAll,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Text("25-27 October 22",
+                                style:
+                                    regularTextStyle14.copyWith(fontSize: 12))
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          //mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                CircleAvatar(
                                   radius: 12,
                                   backgroundImage: AssetImage(MyImage.profile),
                                 ),
-                              ),
-                              Positioned(
-                                left: 28,
-                                child: CircleAvatar(
-                                  radius: 12,
-                                  backgroundImage: AssetImage(MyImage.profile),
-                                ),
-                              ),
-                              Positioned(
-                                left: 43,
-                                child: CircleAvatar(
-                                  radius: 12,
-                                  backgroundImage: AssetImage(MyImage.profile),
-                                ),
-                              ),
-                              Positioned(
-                                left: 57,
-                                child: CircleAvatar(
-                                  radius: 12,
-                                  backgroundColor: MyColor.eSeeAll,
-                                  child: Text(
-                                    "5K+",
-                                    style: regularTextStyle14.copyWith(
-                                        fontSize: 10),
+                                Positioned(
+                                  left: 15,
+                                  child: CircleAvatar(
+                                    radius: 12,
+                                    backgroundImage:
+                                        AssetImage(MyImage.profile),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            width: 70,
-                          ),
-                          Text(
-                            "15.7k+ Members are joined",
-                            style: regularTextStyle14.copyWith(fontSize: 10),
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      SizedBox(
-                        width: 350,
-                        height: 50,
-                        child: ElevatedButton(
+                                Positioned(
+                                  left: 28,
+                                  child: CircleAvatar(
+                                    radius: 12,
+                                    backgroundImage:
+                                        AssetImage(MyImage.profile),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 43,
+                                  child: CircleAvatar(
+                                    radius: 12,
+                                    backgroundImage:
+                                        AssetImage(MyImage.profile),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 57,
+                                  child: CircleAvatar(
+                                    radius: 12,
+                                    backgroundColor: MyColor.eSeeAll,
+                                    child: Text(
+                                      "5K+",
+                                      style: regularTextStyle14.copyWith(
+                                          fontSize: 10),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 70,
+                            ),
+                            Text(
+                              "15.7k+ Members are joined",
+                              style: regularTextStyle14.copyWith(fontSize: 10),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 25,
+                        ),
+                        SizedBox(
+                          width: 350,
+                          height: 50,
+                          child: ElevatedButton(
                             style: ButtonStyle(
                                 shape: WidgetStateProperty.all(
                                     RoundedRectangleBorder(
@@ -395,14 +401,23 @@ class _ConsertPageState extends State<ConsertPage> {
                                         ),
                                         Row(
                                           children: [
-                                            SizedBox(
+                                            Container(
                                               height: 50,
-                                              width: 80,
-                                              child: OutlinedButton(
-                                                  onPressed: () {},
-                                                  child: const Icon(
-                                                      Icons.favorite)),
+                                              width: 50,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(10),
+                                                border: Border.all(color: MyColor.eTopBackColor)
+                                              ),
+                                              child: Icon(Icons.bookmark_border),
                                             ),
+                                            // SizedBox(
+                                            //   height: 50,
+                                            //   width: 80,
+                                            //   child: OutlinedButton(
+                                            //       onPressed: () {},
+                                            //       child: const Icon(
+                                            //           Icons.favorite)),
+                                            // ),
                                             const SizedBox(
                                               width: 15,
                                             ),
@@ -445,7 +460,9 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                   CrossAxisAlignment
                                                                       .start,
                                                               children: [
-                                                                const SizedBox(height: 50,),
+                                                                const SizedBox(
+                                                                  height: 50,
+                                                                ),
                                                                 Text(
                                                                   "Shere Bangla Consert",
                                                                   style: regularTextStyle18
@@ -673,42 +690,109 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                   height: 15,
                                                                 ),
                                                                 RichText(
-                                                                  text: TextSpan(
-                                                                      text: "A concert is a live music performance where artists, bands, or orchestras entertain an audience with their talent and energy. Concerts are vibrant, immersive events that bring together people to celebrate music, artistry, and culture. They can vary in size, style, and purpose, catering to different genres and audiences.",
-                                                                      style: regularTextStyle14.copyWith(
-                                                                        color: MyColor
-                                                                            .searchText,
+                                                                  text:
+                                                                      TextSpan(
+                                                                    text:
+                                                                        "A concert is a live music performance where artists, bands, or orchestras entertain an audience with their talent and energy. Concerts are vibrant, immersive events that bring together people to celebrate music, artistry, and culture. They can vary in size, style, and purpose, catering to different genres and audiences.",
+                                                                    style: regularTextStyle14
+                                                                        .copyWith(
+                                                                      color: MyColor
+                                                                          .searchText,
+                                                                    ),
+                                                                    children: [
+                                                                      TextSpan(
+                                                                        text:
+                                                                            "   Read More",
+                                                                        style: regularTextStyle14.copyWith(
+                                                                            color:
+                                                                                MyColor.eSeeAll),
                                                                       ),
-                                                                      children: [
-                                                                        TextSpan(
-                                                                          text:
-                                                                              "   Read More",
-                                                                          style:
-                                                                              regularTextStyle14.copyWith(color: MyColor.eSeeAll),
-                                                                        )
-                                                                      ],
+                                                                    ],
                                                                   ),
                                                                 ),
+                                                                GestureDetector(
+                                                                  onTap: () {
+                                                                    Navigator.push(
+                                                                        context,
+                                                                        MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                CustomTabBarExample()));
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    height: 35,
+                                                                    width: double
+                                                                        .infinity,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      borderRadius: const BorderRadius
+                                                                          .only(
+                                                                          topLeft: Radius.circular(
+                                                                              20),
+                                                                          topRight:
+                                                                              Radius.circular(20)),
+                                                                      color: MyColor
+                                                                          .eTopBackColor,
+                                                                    ),
+                                                                    child: Center(
+                                                                        child: Text(
+                                                                      "Message",
+                                                                      style: regularTextStyle16.copyWith(
+                                                                          color:
+                                                                              MyColor.whiteColor),
+                                                                    )),
+                                                                  ),
+                                                                )
                                                               ],
                                                             ),
                                                           ),
                                                           Positioned(
                                                             left: 30,
-                                                            right :30,
+                                                            right: 30,
                                                             bottom: 450,
                                                             child: Container(
-                                                              padding: const EdgeInsets.all(15),
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(15),
                                                               height: 110,
-                                                              decoration: BoxDecoration(
-                                                                borderRadius: BorderRadius.circular(15),
-                                                                color: MyColor.whiteColor,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            15),
+                                                                color: MyColor
+                                                                    .whiteColor,
                                                               ),
                                                               child: Row(
-                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
                                                                 children: [
-                                                                  TopCircleWidget(circle: MyColor.deepOrange, title: "Cell", boxIcon: MyImage.phone),
-                                                                  TopCircleWidget(circle: MyColor.deepBlue , title: "Direction", boxIcon: MyImage.directions),
-                                                                  TopCircleWidget(circle: MyColor.deepOrange, title: "My Ticket", boxIcon: MyImage.ticket),
+                                                                  TopCircleWidget(
+                                                                      circle: MyColor
+                                                                          .deepOrange,
+                                                                      title:
+                                                                          "Cell",
+                                                                      boxIcon:
+                                                                          MyImage
+                                                                              .phone),
+                                                                  TopCircleWidget(
+                                                                      circle: MyColor
+                                                                          .deepBlue,
+                                                                      title:
+                                                                          "Direction",
+                                                                      boxIcon:
+                                                                          MyImage
+                                                                              .directions),
+                                                                  TopCircleWidget(
+                                                                      circle: MyColor
+                                                                          .deepOrange,
+                                                                      title:
+                                                                          "My Ticket",
+                                                                      boxIcon:
+                                                                          MyImage
+                                                                              .ticket),
                                                                 ],
                                                               ),
                                                             ),
@@ -740,17 +824,17 @@ class _ConsertPageState extends State<ConsertPage> {
                               style: regularTextStyle16.copyWith(
                                   color: MyColor.whiteColor),
                             ),
-                        ),
-                      )
-                    ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
-    ),
     );
   }
 }
