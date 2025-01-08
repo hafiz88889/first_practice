@@ -47,9 +47,13 @@ class _HomePageState extends State<HomePage> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Hi Wellcome",
-                  style: regularTextStyle14.copyWith(color: MyColor.searchText,fontSize: 12),
+                Row(
+                  children: [
+                    Text(
+                      "Hi Wellcome",
+                      style: regularTextStyle14.copyWith(color: MyColor.searchText,fontSize: 12),
+                    ),
+                  ],
                 ),
                 Text(
                   "Md Rafi Islam",
@@ -120,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 15,),
+                            const SizedBox(width: 15,),
                             Container(
                               height: 50,
                               width: 60,

@@ -2,7 +2,6 @@ import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
-import 'package:event/ui/screen/messanger_screen/screen_page/messanger_page.dart';
 import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
@@ -186,10 +185,30 @@ class _ConsertPageState extends State<ConsertPage> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          "Shere Bangla Consert",
-                                          style: regularTextStyle18.copyWith(
-                                              color: MyColor.blackColor),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Shere Bangla Consert",
+                                              style:
+                                                  regularTextStyle18.copyWith(
+                                                      color:
+                                                          MyColor.blackColor),
+                                            ),
+                                            ElevatedButton(
+                                              style: ButtonStyle(
+                                                shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+                                                backgroundColor: WidgetStateProperty.all(Colors.orangeAccent[100])
+                                              ),
+                                                onPressed: () {},
+                                                child: Text(
+                                                  "\$299 USD",
+                                                  style: regularTextStyle16
+                                                      .copyWith(
+                                                          color:
+                                                              MyColor.eSeeAll),
+                                                )),
+                                          ],
                                         ),
                                         const SizedBox(height: 20),
                                         Row(
@@ -304,7 +323,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                           ],
                                         ),
                                         const SizedBox(
-                                          height: 40,
+                                          height: 25,
                                         ),
                                         Row(
                                           children: [
@@ -352,19 +371,36 @@ class _ConsertPageState extends State<ConsertPage> {
                                               ],
                                             ),
                                             const Spacer(),
-                                            Icon(
-                                              Icons.message,
-                                              color: MyColor.blackColor,
-                                              size: 30,
+                                            Container(
+                                              height: 50,
+                                              width: 50,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                color:MyColor.whiteColor,
+                                              ),
+                                              child:Icon(
+                                                Icons.message,
+                                                color: MyColor.blackColor,
+                                                size: 30,
+                                              ),
                                             ),
                                             const SizedBox(
                                               width: 20,
                                             ),
-                                            Icon(
-                                              Icons.phone,
-                                              color: MyColor.blackColor,
-                                              size: 30,
+                                            Container(
+                                              height: 50,
+                                              width: 50,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                color: MyColor.whiteColor
+                                              ),
+                                              child:Icon(
+                                                Icons.phone,
+                                                color: MyColor.blackColor,
+                                                size: 30,
+                                              ),
                                             ),
+
                                           ],
                                         ),
                                         const SizedBox(
@@ -405,10 +441,13 @@ class _ConsertPageState extends State<ConsertPage> {
                                               height: 50,
                                               width: 50,
                                               decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(10),
-                                                border: Border.all(color: MyColor.eTopBackColor)
-                                              ),
-                                              child: Icon(Icons.bookmark_border),
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  border: Border.all(
+                                                      color: MyColor
+                                                          .eTopBackColor)),
+                                              child:
+                                                  Icon(Icons.bookmark_border),
                                             ),
                                             // SizedBox(
                                             //   height: 50,
@@ -461,14 +500,32 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                       .start,
                                                               children: [
                                                                 const SizedBox(
-                                                                  height: 50,
+                                                                  height: 30,
                                                                 ),
-                                                                Text(
-                                                                  "Shere Bangla Consert",
-                                                                  style: regularTextStyle18
-                                                                      .copyWith(
-                                                                          color:
-                                                                              MyColor.blackColor),
+                                                                Row(
+                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                  children: [
+                                                                    Text(
+                                                                      "Shere Bangla Consert",
+                                                                      style: regularTextStyle18
+                                                                          .copyWith(
+                                                                              color:
+                                                                                  MyColor.blackColor),
+                                                                    ),
+                                                                    ElevatedButton(
+                                                                        style: ButtonStyle(
+                                                                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+                                                                            backgroundColor: WidgetStateProperty.all(Colors.orangeAccent[100])
+                                                                        ),
+                                                                        onPressed: () {},
+                                                                        child: Text(
+                                                                          "\$299 USD",
+                                                                          style: regularTextStyle16
+                                                                              .copyWith(
+                                                                              color:
+                                                                              MyColor.eSeeAll),
+                                                                        )),
+                                                                  ],
                                                                 ),
                                                                 const SizedBox(
                                                                     height: 20),
@@ -607,7 +664,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                   ],
                                                                 ),
                                                                 const SizedBox(
-                                                                  height: 40,
+                                                                  height: 25,
                                                                 ),
                                                                 Row(
                                                                   children: [
@@ -618,18 +675,12 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                               AssetImage(MyImage.profile),
                                                                         ),
                                                                         Positioned(
-                                                                          top:
-                                                                              27,
-                                                                          left:
-                                                                              27,
-                                                                          child:
-                                                                              SizedBox(
-                                                                            height:
-                                                                                12,
-                                                                            width:
-                                                                                12,
-                                                                            child:
-                                                                                CircleAvatar(
+                                                                          top: 27,
+                                                                          left: 27,
+                                                                          child: SizedBox(
+                                                                            height: 12,
+                                                                            width: 12,
+                                                                            child: CircleAvatar(
                                                                               backgroundColor: MyColor.greenColor,
                                                                             ),
                                                                           ),
@@ -640,9 +691,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                       width: 10,
                                                                     ),
                                                                     Column(
-                                                                      crossAxisAlignment:
-                                                                          CrossAxisAlignment
-                                                                              .start,
+                                                                      crossAxisAlignment: CrossAxisAlignment.start,
                                                                       children: [
                                                                         Text(
                                                                           "Md Hafizur Rahman",
@@ -657,27 +706,39 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                       ],
                                                                     ),
                                                                     const Spacer(),
-                                                                    Icon(
-                                                                      Icons
-                                                                          .message,
-                                                                      color: MyColor
-                                                                          .blackColor,
-                                                                      size: 30,
+                                                                    Container(
+                                                                      height: 50,
+                                                                      width: 50,
+                                                                      decoration: BoxDecoration(
+                                                                        shape: BoxShape.circle,
+                                                                        color: Colors.white,
+                                                                      ),
+                                                                      child:Icon(
+                                                                        Icons.message,
+                                                                        color: MyColor.blackColor,
+                                                                        size: 30,
+                                                                      ),
                                                                     ),
                                                                     const SizedBox(
                                                                       width: 20,
                                                                     ),
-                                                                    Icon(
-                                                                      Icons
-                                                                          .phone,
-                                                                      color: MyColor
-                                                                          .blackColor,
-                                                                      size: 30,
+                                                                    Container(
+                                                                      height: 50,
+                                                                      width: 50,
+                                                                      decoration: BoxDecoration(
+                                                                        shape: BoxShape.circle,
+                                                                        color: Colors.white,
+                                                                      ),
+                                                                      child:Icon(
+                                                                        Icons.phone,
+                                                                        color: MyColor.blackColor,
+                                                                        size: 30,
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
                                                                 const SizedBox(
-                                                                  height: 25,
+                                                                  height: 15,
                                                                 ),
                                                                 Text(
                                                                   "Description",
@@ -712,35 +773,26 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                 ),
                                                                 GestureDetector(
                                                                   onTap: () {
-                                                                    Navigator.push(
-                                                                        context,
-                                                                        MaterialPageRoute(
-                                                                            builder: (context) =>
-                                                                                CustomTabBarExample()));
-                                                                  },
+                                                                    Navigator.push(context, MaterialPageRoute(builder: (context) =>CustomTabBarExample()));},
                                                                   child:
                                                                       Container(
-                                                                    height: 35,
+                                                                    height: 50,
                                                                     width: double
                                                                         .infinity,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      borderRadius: const BorderRadius
-                                                                          .only(
-                                                                          topLeft: Radius.circular(
-                                                                              20),
-                                                                          topRight:
-                                                                              Radius.circular(20)),
-                                                                      color: MyColor
-                                                                          .eTopBackColor,
+                                                                      borderRadius: const BorderRadius.only(
+                                                                          topLeft: Radius.circular(20),
+                                                                          topRight: Radius.circular(20)),
+                                                                      color: MyColor.eTopBackColor,
                                                                     ),
                                                                     child: Center(
                                                                         child: Text(
                                                                       "Message",
                                                                       style: regularTextStyle16.copyWith(
-                                                                          color:
-                                                                              MyColor.whiteColor),
-                                                                    )),
+                                                                          color: MyColor.whiteColor),
+                                                                    )
+                                                                    ),
                                                                   ),
                                                                 )
                                                               ],

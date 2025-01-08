@@ -14,5 +14,10 @@ static String bigBanner="assets/images/big banner.jpg";
 static String phone="assets/images/phone-call.png";
 static String directions="assets/images/direction.png";
 static String ticket="assets/images/tiket.png";
-
+static String tik="assets/images/wishlist.png";
+static String hand="assets/images/hand.png";
+static String fire="assets/images/fires.png";
+static String facebook="assets/images/facebook.png";
+static String google="assets/images/google.png";
+static String apple="assets/images/apple.png";
 }
