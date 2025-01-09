@@ -22,7 +22,7 @@ class _CustomTabBarExampleState extends State<CustomTabBarExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColor.backgroundColor1,
+      backgroundColor: MyColor.whiteColor,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Padding(

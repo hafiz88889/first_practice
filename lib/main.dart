@@ -1,6 +1,7 @@
 import 'package:event/ui/screen/home_sceen/screen_page/home_page.dart';
 import 'package:flutter/material.dart';
 
+import 'ui/screen/dialouge_screen/dialouge/dialouge_page.dart';
 import 'ui/screen/registation_screen/screen_page/reg_page.dart';
 import 'ui/screen/signin_screen/screen_page/signin_page.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Booking Event",
-      home: RegPage(),
+      home: DialougePage(),
     );
   }
 }

@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: MyColor.backgroundColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: MyColor.eTopBackColor,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                       "Hi Wellcome",
                       style: regularTextStyle14.copyWith(color: MyColor.searchText,fontSize: 12),
                     ),
+                    Image(image: AssetImage(MyImage.hand),height: 30,width: 30,)
                   ],
                 ),
                 Text(
@@ -146,13 +148,15 @@ class _HomePageState extends State<HomePage> {
                               "Popular Events",
                               style: regularTextStyle18,
                             ),
+                            Image(image: AssetImage(MyImage.fire),height: 30,width: 30,),
+                           const Spacer(),
                             Text(
                               "View All",
                               style: regularTextStyle14.copyWith(
                                   color: MyColor.eSeeAll),
                             ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -243,7 +247,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: 90,
               width: 387,
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: MyColor.whiteColor,
@@ -286,9 +290,9 @@ class _HomePageState extends State<HomePage> {
                  const Spacer(),
                   Column(
                     children: [
-                      SizedBox(height: 15,),
+                      const SizedBox(height: 15,),
                       Text("\$10. Usd",style: regularTextStyle14.copyWith(color: MyColor.eSeeAll),),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Text("Join Now",style: regularTextStyle14.copyWith(color: MyColor.blackColor),),
                     ],
                   )

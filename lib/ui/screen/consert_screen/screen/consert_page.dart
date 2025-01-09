@@ -41,17 +41,13 @@ class _ConsertPageState extends State<ConsertPage> {
                         child: Icon(
                           Icons.expand_circle_down_rounded,
                           color: MyColor.whiteColor,
-                          size: 50,
+                          size: 40,
                         ),
                       ),
                       const SizedBox(
                         width: 250,
                       ),
-                      Icon(
-                        Icons.heart_broken,
-                        color: MyColor.redColor,
-                        size: 50,
-                      )
+                      Image(image: AssetImage(MyImage.love),height: 30,width: 30,)
                     ],
                   ),
                 ),
@@ -60,6 +56,7 @@ class _ConsertPageState extends State<ConsertPage> {
                   child: Container(
                     margin: const EdgeInsets.symmetric(horizontal: 25),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "Shere Bangla Brand \nMusic Consert",
@@ -447,7 +444,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                       color: MyColor
                                                           .eTopBackColor)),
                                               child:
-                                                  Icon(Icons.bookmark_border),
+                                                  const Icon(Icons.bookmark_border),
                                             ),
                                             // SizedBox(
                                             //   height: 50,
@@ -709,7 +706,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                     Container(
                                                                       height: 50,
                                                                       width: 50,
-                                                                      decoration: BoxDecoration(
+                                                                      decoration: const BoxDecoration(
                                                                         shape: BoxShape.circle,
                                                                         color: Colors.white,
                                                                       ),
@@ -725,7 +722,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                     Container(
                                                                       height: 50,
                                                                       width: 50,
-                                                                      decoration: BoxDecoration(
+                                                                      decoration: const BoxDecoration(
                                                                         shape: BoxShape.circle,
                                                                         color: Colors.white,
                                                                       ),

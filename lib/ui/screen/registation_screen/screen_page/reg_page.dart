@@ -18,7 +18,10 @@ class _RegPageState extends State<RegPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: MyColor.whiteColor,
         appBar: AppBar(
+          backgroundColor: MyColor.whiteColor,
+          automaticallyImplyLeading: false,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -139,16 +142,21 @@ class _RegPageState extends State<RegPage> {
               ),
               const SizedBox(height: 50,),
               Center(
-                child: RichText(
-                  text: TextSpan(
-                      text: "Already have an account?",
-                      style:
-                          regularTextStyle14.copyWith(color: MyColor.searchText),
-                  children: [
-                    TextSpan(
-                      text: "  Sign in",style: regularTextStyle14.copyWith(color: MyColor.eSeeAll)
-                    )
-                  ],
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SigninPage()));
+                  },
+                  child: RichText(
+                    text: TextSpan(
+                        text: "Already have an account?",
+                        style:
+                            regularTextStyle14.copyWith(color: MyColor.searchText),
+                    children: [
+                      TextSpan(
+                        text: "  Sign in",style: regularTextStyle14.copyWith(color: MyColor.eSeeAll)
+                      )
+                    ],
+                    ),
                   ),
                 ),
               ),
