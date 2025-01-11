@@ -1,6 +1,7 @@
 import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
+import 'package:event/ui/screen/dialouge_screen/dialouge/dialouge_page.dart';
 import 'package:flutter/material.dart';
 
 class WishListPage extends StatefulWidget {
@@ -68,7 +69,9 @@ class _WishListPageState extends State<WishListPage> {
                 backgroundColor: WidgetStateProperty.all(MyColor.eTopBackColor),
                 shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
               ),
-                onPressed: () {},
+                onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const DialougePage()));
+                },
                 child: Text(
                   "EXPLORE EVENTS",
                   style: regularTextStyle14.copyWith(color: MyColor.whiteColor,fontWeight: FontWeight.normal),
