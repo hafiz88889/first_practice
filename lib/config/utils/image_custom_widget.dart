@@ -31,6 +31,12 @@ static String me2="assets/images/20210129_173003.jpg";
 static String me3="assets/images/20210204_151745.jpg";
 static String me4="assets/images/20210205_163359.jpg";
 static String me5="assets/images/20210205_163655.jpg";
+static String one="assets/images/1.jpg";
+static String two="assets/images/2.jpg";
+static String three="assets/images/3.jpg";
+static String four="assets/images/4.jpg";
+static String five="assets/images/5.jpg";
+static String six="assets/images/6.jpg";
 
 
 }

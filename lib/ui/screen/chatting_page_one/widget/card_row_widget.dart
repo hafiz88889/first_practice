@@ -3,7 +3,7 @@ import 'package:event/config/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
 class CardRowWidget extends StatelessWidget {
-  final image;
+  final String image;
   final String title1;
   final String title2;
   final String title3;
