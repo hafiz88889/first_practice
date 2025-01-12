@@ -17,3 +17,13 @@ final regularTextStyle14=TextStyle(
   fontWeight: FontWeight.bold,
     color: MyColor.whiteColor
 );
+
+final hedingText=TextStyle(
+  fontSize: 16,
+  color: MyColor.blackColor,
+  fontWeight: FontWeight.bold,
+);
+final visibleText=TextStyle(
+  fontSize: 14,
+  color: MyColor.searchText,
+);

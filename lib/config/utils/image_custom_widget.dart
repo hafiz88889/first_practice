@@ -20,4 +20,17 @@ static String fire="assets/images/fires.png";
 static String facebook="assets/images/facebook.png";
 static String google="assets/images/google.png";
 static String apple="assets/images/apple.png";
+static String searchIcon="assets/images/search.png";
+static String threeDotMenu="assets/images/menu.png";
+static String imageIcon="assets/images/image.png";
+static String emoji="assets/images/happy.png";
+static String backArrowIcon="assets/images/backicon.png";
+static String uploadFileIcon="assets/images/attested.png";
+static String me1="assets/images/20210128_121325.jpg";
+static String me2="assets/images/20210129_173003.jpg";
+static String me3="assets/images/20210204_151745.jpg";
+static String me4="assets/images/20210205_163359.jpg";
+static String me5="assets/images/20210205_163655.jpg";
+
+
 }

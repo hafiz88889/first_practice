@@ -4,6 +4,7 @@ import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/consert_screen/screen/consert_page.dart';
 import 'package:event/ui/screen/home_sceen/widget/choice_categori_widget.dart';
 import 'package:event/ui/screen/home_sceen/widget/middle.dart';
+import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -182,11 +183,16 @@ class _HomePageState extends State<HomePage> {
                           const SizedBox(
                             width: 15,
                           ),
-                          Middle(
-                              image: MyImage.banner2,
-                              title1: "Atif Aslam Brand",
-                              title2: "12-15 October,22",
-                              title3: "Army Stadium Dhaka"),
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomTabBarExample()));
+                            },
+                            child: Middle(
+                                image: MyImage.banner2,
+                                title1: "Atif Aslam Brand",
+                                title2: "12-15 October,22",
+                                title3: "Army Stadium Dhaka"),
+                          ),
                           const SizedBox(
                             width: 20,
                           ),

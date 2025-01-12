@@ -2,6 +2,7 @@ import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
+import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
 import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
@@ -770,7 +771,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                 ),
                                                                 GestureDetector(
                                                                   onTap: () {
-                                                                    Navigator.push(context, MaterialPageRoute(builder: (context) =>CustomTabBarExample()));},
+                                                                    Navigator.push(context, MaterialPageRoute(builder: (context) =>const ChattingPageOne()));},
                                                                   child:
                                                                       Container(
                                                                     height: 50,
