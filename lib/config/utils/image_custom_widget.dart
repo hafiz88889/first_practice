@@ -37,6 +37,11 @@ static String three="assets/images/3.jpg";
 static String four="assets/images/4.jpg";
 static String five="assets/images/5.jpg";
 static String six="assets/images/6.jpg";
+static String seven="assets/images/7.jpg";
+static String eight="assets/images/8.jpg";
+static String nine="assets/images/9.jpg";
+static String ten="assets/images/10.jpg";
+static String eleven="assets/images/11.jpg";
 
 
 }
