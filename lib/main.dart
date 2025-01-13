@@ -1,5 +1,7 @@
 import 'package:first_practice/check_box_widget/check_box.dart';
+import 'package:first_practice/slider_widget/slider_page.dart';
 import 'package:flutter/cupertino.dart';
+import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'screen_page/wallet_page.dart';
 import 'screen_page/assignment_page_one.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
         theme :ThemeData.light(),
-      home:const CheckBox(),
+      home:const homeActivity(),
     );
   }
 }

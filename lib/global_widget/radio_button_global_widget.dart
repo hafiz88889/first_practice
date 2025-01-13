@@ -59,7 +59,8 @@ class _RadioButtonGlobalWidgetState extends State<RadioButtonGlobalWidget> {
                         setState(() {
                           _value = value!;
                         });
-                      }),
+                      }
+                      ),
                 ],
               ),
               Row(

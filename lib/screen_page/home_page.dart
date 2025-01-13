@@ -1,4 +1,12 @@
+import 'package:first_practice/chatting_list_view/page/screen_page.dart';
+import 'package:first_practice/chatting_list_view_two/main_messanger.dart';
+import 'package:first_practice/check_box_widget/check_box.dart';
+import 'package:first_practice/list_view/list_view_page/list_view.dart';
+import 'package:first_practice/list_view_builder/list_view_builder.dart';
+import 'package:first_practice/radio_button/radio_button_page.dart';
+import 'package:first_practice/row_widget/first_row_page.dart';
 import 'package:first_practice/screen_page/wallet_page.dart';
+import 'package:first_practice/slider_widget/slider_page.dart';
 import 'package:flutter/material.dart';
 import 'blog_page.dart';
 import 'container_page.dart';
@@ -48,159 +56,217 @@ class _homeActivityState extends State<homeActivity> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            height: 700,
-            width: 500,
-            color: Colors.white10,
-            child: Row(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>WalletPage()));
-                        },
-                        child: Container(
-                          height: 40,
-                          width: 200,
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.yellow,
-                                blurRadius: 10,
-                              )
-                            ],
-                            color: Colors.deepPurpleAccent,
-                          ),
-                          child:const  Center(child: Text("Go My Wallet",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-                        ),
-
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                        child: InkWell(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
-                          },
-                          child: Container(
-                            height: 40,
-                              width: 200,
-                              padding: EdgeInsets.all(10),
-                              margin: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(40),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.yellow,
-                                    blurRadius: 10,
-                                  )
-                                ],
-                                color: Colors.deepPurpleAccent,
-                              ),
-                              child: Center(child: Text("Go Doctor Appoinment Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-                              ),
-
-                        ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>BusPage()));
-                        },
-                        child: Container(
-                          height: 40,
-                          width: 200,
-                          padding: const EdgeInsets.all(10),
-                          margin: const EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            boxShadow:const [
-                              BoxShadow(
-                                color: Colors.yellow,
-                                blurRadius: 10,
-                              )
-                            ],
-                            color: Colors.deepPurpleAccent,
-                          ),
-                          child: const Center(child: Text("Go Bus Booking Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-
-                          // child: Text(
-                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
-                        ),
-
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>messanger_page()));
-                        },
-                        child: Container(
-                          height: 40,
-                          width: 200,
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.yellow,
-                                blurRadius: 10,
-                              )
-                            ],
-                            color: Colors.deepPurpleAccent,
-                          ),
-                          child: Center(child: Text("Go Massanger Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-
-                          // child: Text(
-                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
-                        ),
-
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
-                        },
-                        child: Container(
-                          height: 40,
-                          width: 200,
-                          padding: EdgeInsets.all(10),
-                          margin: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.yellow,
-                                blurRadius: 10,
-                              )
-                            ],
-                            color: Colors.deepPurpleAccent,
-                          ),
-                          child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
-
-                          // child: Text(
-                          //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
-                        ),
-
-                      ),
-                    ),
+            padding: EdgeInsets.all(10),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>WalletPage()));
+              },
+              child: Container(
+                height: 40,
+                width: 200,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.yellow,
+                      blurRadius: 10,
+                    )
                   ],
+                  color: Colors.deepPurpleAccent,
                 ),
+                child:const  Center(child: Text("Go My Wallet",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+              ),
 
-              ],
             ),
           ),
+          Container(
+            padding: EdgeInsets.all(10),
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
+                },
+                child: Container(
+                  height: 40,
+                    width: 200,
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.yellow,
+                          blurRadius: 10,
+                        )
+                      ],
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    child: Center(child: Text("Go Doctor Appoinment Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+                    ),
+
+              ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>BusPage()));
+              },
+              child: Container(
+                height: 40,
+                width: 200,
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow:const [
+                    BoxShadow(
+                      color: Colors.yellow,
+                      blurRadius: 10,
+                    )
+                  ],
+                  color: Colors.deepPurpleAccent,
+                ),
+                child: const Center(child: Text("Go Bus Booking Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                // child: Text(
+                //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+              ),
+
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>messanger_page()));
+              },
+              child: Container(
+                height: 40,
+                width: 200,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.yellow,
+                      blurRadius: 10,
+                    )
+                  ],
+                  color: Colors.deepPurpleAccent,
+                ),
+                child: Center(child: Text("Go Massanger Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                // child: Text(
+                //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+              ),
+
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>blog_pageActivity()));
+              },
+              child: Container(
+                height: 40,
+                width: 200,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.yellow,
+                      blurRadius: 10,
+                    )
+                  ],
+                  color: Colors.deepPurpleAccent,
+                ),
+                child: Center(child: Text("Go Blog Page",style: TextStyle(color: Colors.white,fontFamily: "FontSecond",fontSize: 15,fontWeight: FontWeight.bold),)),
+
+                // child: Text(
+                //   "Test",style: TextStyle(fontFamily: "FontMain",fontSize: 80,color: Colors.blue,fontWeight: FontWeight.bold),)
+              ),
+
+            ),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SliderPage()));
+              }, child: Text("Go slider",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RadioButtonPage()));
+              }, child: Text("Go Radio button",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckBox()));
+              }, child: Text("Go Checkbox",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RowClass()));
+              }, child: Text("Go Row practice",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ListViewPage()));
+              }, child: Text("Go List view page",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ListViewBuilder()));
+              }, child: Text("Go Listview builder page",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MainMessanger()));
+              }, child: Text("Go Chatting page",style: TextStyle(color: Colors.white),),
+          ),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.green)
+
+              ),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ChattingPage()));
+              }, child: Text("Go Chatting page",style: TextStyle(color: Colors.white),),
+          ),
+
         ],
       ),
       ),

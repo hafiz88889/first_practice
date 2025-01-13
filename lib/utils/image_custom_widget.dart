@@ -13,6 +13,8 @@ class MyImage{
   static String recivedMoneyIcon="assets/icons/recived.svg";
   static String visaIcon="assets/icons/visa-svgrepo-com.svg";
   static String kImage="assets/images/6.jpg";
+  static String me="assets/images/me.JPG";
+  static String menu="assets/images/menu.png";
 
 
 }

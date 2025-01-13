@@ -36,74 +36,76 @@ class _CheckBoxWidgetState extends State<CheckBoxWidget> {
             widget.title1,
             style: regularTextStyle.copyWith(fontSize: 20),
           ),
-          Row(
-            children: [
-              Row(
-                children: [
-                  Text(widget.title2,style: regularTextStyle,),
-                  Checkbox(
-                      activeColor: MyColor.blueColor,
-                      checkColor: MyColor.whiteColor,
-                      value: _value,
-
-                      onChanged: (newvalue) {
-                        setState(() {
-                          _value = newvalue!;
-                        });
-                      }
-                  ),
-                ],
-              ),
-              const SizedBox(width: 20,),
-              Row(
-                children: [
-                  Text(widget.title3,style: regularTextStyle),
-                  Checkbox(
-                      activeColor: MyColor.blueColor,
-                      checkColor: MyColor.whiteColor,
-                      value: _value1,
-                      onChanged: (newvalue) {
-                        setState(() {
-                          _value1 = newvalue!;
-                        });
-                      }
-                  ),
-                ],
-              ),
-              const SizedBox(width: 20,),
-              Row(
-                children: [
-                  Text(widget.title4,style: regularTextStyle),
-                  Checkbox(
-                      activeColor: MyColor.blueColor,
-                      checkColor: MyColor.whiteColor,
-                      value: _value2,
-                      onChanged: (newvalue) {
-                        setState(() {
-                          _value2 = newvalue!;
-                        });
-                      }
-                  ),
-                ],
-              ),
-             const SizedBox(width: 20,),
-              Row(
-                children: [
-                  Text(widget.title5,style: regularTextStyle),
-                  Checkbox(
-                      activeColor: MyColor.blueColor,
-                      checkColor: MyColor.whiteColor,
-                      value: _value3,
-                      onChanged: (newvalue) {
-                        setState(() {
-                          _value3 = newvalue!;
-                        });
-                      }
-                  ),
-                ],
-              ),
-            ],
-          ),
+         SingleChildScrollView(
+           scrollDirection: Axis.horizontal,
+           child:  Row(
+             children: [
+               Row(
+                 children: [
+                   Text(widget.title2,style: regularTextStyle,),
+                   Checkbox(
+                       activeColor: MyColor.blueColor,
+                       checkColor: MyColor.whiteColor,
+                       value: _value,
+                       onChanged: (newvalue) {
+                         setState(() {
+                           _value = newvalue!;
+                         });
+                       }
+                   ),
+                 ],
+               ),
+               const SizedBox(width: 20,),
+               Row(
+                 children: [
+                   Text(widget.title3,style: regularTextStyle),
+                   Checkbox(
+                       activeColor: MyColor.blueColor,
+                       checkColor: MyColor.whiteColor,
+                       value: _value1,
+                       onChanged: (newvalue) {
+                         setState(() {
+                           _value1 = newvalue!;
+                         });
+                       }
+                   ),
+                 ],
+               ),
+               const SizedBox(width: 20,),
+               Row(
+                 children: [
+                   Text(widget.title4,style: regularTextStyle),
+                   Checkbox(
+                       activeColor: MyColor.blueColor,
+                       checkColor: MyColor.whiteColor,
+                       value: _value2,
+                       onChanged: (newvalue) {
+                         setState(() {
+                           _value2 = newvalue!;
+                         });
+                       }
+                   ),
+                 ],
+               ),
+               const SizedBox(width: 20,),
+               Row(
+                 children: [
+                   Text(widget.title5,style: regularTextStyle),
+                   Checkbox(
+                       activeColor: MyColor.blueColor,
+                       checkColor: MyColor.whiteColor,
+                       value: _value3,
+                       onChanged: (newvalue) {
+                         setState(() {
+                           _value3 = newvalue!;
+                         });
+                       }
+                   ),
+                 ],
+               ),
+             ],
+           ),
+         )
 
         ],
       ),
