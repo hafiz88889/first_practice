@@ -28,21 +28,21 @@ class CardRowWidget extends StatelessWidget {
             backgroundImage: AssetImage(image),
           ),
         ),
-         SizedBox(width: 20,),
+        const  SizedBox(width: 20,),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(title1,style: hedingText.copyWith(fontWeight: FontWeight.bold),),
-             SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Text(title2,style: hedingText.copyWith(fontWeight: FontWeight.normal),),
           ],
         ),
-         Spacer(),
+         const Spacer(),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(title3,style: visibleText,),
-             SizedBox(height: 10,),
+            const  SizedBox(height: 10,),
             Container(
               height: 25,
               width: 25,

@@ -20,6 +20,7 @@ class _ChattingPageOneState extends State<ChattingPageOne> {
     return Scaffold(
       backgroundColor: MyColor.backgroundColor,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: MyColor.backgroundColor,
         automaticallyImplyLeading: false,
         title: Row(
