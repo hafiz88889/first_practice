@@ -42,6 +42,11 @@ static String eight="assets/images/8.jpg";
 static String nine="assets/images/9.jpg";
 static String ten="assets/images/10.jpg";
 static String eleven="assets/images/11.jpg";
+static String covid="assets/images/covid19_protection.png";
+static String scanner="assets/images/barcode-scanner.png";
+static String paypal="assets/images/paypal.png";
+static String masterCard="assets/images/mastercard.JPG";
+static String visaCard="assets/images/visacard.JPG";
 
 
 }

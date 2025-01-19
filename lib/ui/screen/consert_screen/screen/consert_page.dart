@@ -2,8 +2,8 @@ import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
+import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_one_and_two/screen/tiket_page.dart';
 import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
-import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
 class ConsertPage extends StatefulWidget {
@@ -198,7 +198,9 @@ class _ConsertPageState extends State<ConsertPage> {
                                                 shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
                                                 backgroundColor: WidgetStateProperty.all(Colors.orangeAccent[100])
                                               ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                               // Navigator.push(context, MaterialPageRoute(builder: (context)=>TicketPage));
+                                                },
                                                 child: Text(
                                                   "\$299 USD",
                                                   style: regularTextStyle16
@@ -835,14 +837,14 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                       boxIcon:
                                                                           MyImage
                                                                               .directions),
-                                                                  TopCircleWidget(
-                                                                      circle: MyColor
-                                                                          .deepOrange,
-                                                                      title:
-                                                                          "My Ticket",
-                                                                      boxIcon:
-                                                                          MyImage
-                                                                              .ticket),
+                                                                  InkWell(
+                                                                    onTap:(){
+                                                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const TicketPage()));},
+                                                                    child: TopCircleWidget(
+                                                                        circle: MyColor.deepOrange,
+                                                                        title: "My Ticket",
+                                                                        boxIcon: MyImage.ticket),
+                                                                  ),
                                                                 ],
                                                               ),
                                                             ),

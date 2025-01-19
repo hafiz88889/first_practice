@@ -38,5 +38,9 @@ class MyColor{
   static Color backgroundColor1 = const Color(0xffF5F5F5);
   static Color backgroundColor2 = const Color(0xffFF6F6F6);
   static Color circleColor = const Color(0xff2BD49B);
+  static Color softOrangeColor = const Color(0xffFAE0D1);
+  static Color softBlackColor = const Color(0xff545456);
+  static Color backColor = const Color(0xffF0F0EE);
+  static Color normalOrange = const Color(0xffF87723);
 
 }

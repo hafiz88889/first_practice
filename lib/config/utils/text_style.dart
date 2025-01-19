@@ -13,6 +13,7 @@ final regularTextStyle16 =TextStyle(
 
 );
 final regularTextStyle14=TextStyle(
+
   fontSize: 14,
   fontWeight: FontWeight.bold,
     color: MyColor.whiteColor
