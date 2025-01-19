@@ -47,8 +47,19 @@ class _TicketPageState extends State<TicketPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 25,),
-                        Text("Stay safe, be safe",style: regularTextStyle16,),
+                        const SizedBox(height: 20,),
+                        Center(
+                          child: Container(
+                            height: 5,
+                            width: 70,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: MyColor.greyColor.withAlpha(100)
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 40,),
+                        Text("Stay safe, be safe",style: regularTextStyle18.copyWith(color: MyColor.blackColor),),
                         const SizedBox(height: 12,),
                         Container(
                           height: 200,
@@ -106,7 +117,7 @@ class _TicketPageState extends State<TicketPage> {
                             Text("I confirm that i am healthy",style: regularTextStyle16.copyWith(color: MyColor.blackColor),)
                           ],
                         ),
-                        const SizedBox(height: 200,),
+                        const SizedBox(height: 150,),
                         Center(
                           child: SizedBox(
                             height: 60,
@@ -143,7 +154,7 @@ class _TicketPageState extends State<TicketPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Tiket type",style: regularTextStyle18.copyWith(color: MyColor.blackColor)),
+            Text("Ticket Type",style: regularTextStyle18.copyWith(color: MyColor.blackColor)),
             const SizedBox(height: 15,),
             Row(
               children: [

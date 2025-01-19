@@ -1,8 +1,7 @@
 import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
-import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_four/screen/Payment_confirm_page.dart';
-import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_three/widget/bottom_sheet_text_field_widget.dart';
+import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_four/screen/payment_confirm_page.dart';
 import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_three/widget/pay_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +12,7 @@ class PaymentPage extends StatefulWidget {
   State<PaymentPage> createState() => _PaymentPageState();
 }
 int _value=0;
+bool valuefirst=false;
 class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
@@ -40,29 +40,215 @@ class _PaymentPageState extends State<PaymentPage> {
           child: ElevatedButton(
               onPressed: (){
                 showModalBottomSheet(
-                  backgroundColor: MyColor.eSeeAll,
+                  backgroundColor: MyColor.bottomSheetColor,
                     context: context,
                     builder: (BuildContext contex){
-                      return Padding(
-                        padding: const EdgeInsets.all(14.0),
+                      return Container(
+                        padding:const  EdgeInsets.all(30),
                         child: Column(
                           children: [
-                            Text("widget.title",style: regularTextStyle18.copyWith(color: MyColor.whiteColor),),
-                            const SizedBox(height: 10,),
-                            Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
-                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
-                                    filled: true,
-                                    fillColor: MyColor.normalOrange,
-                                    hintText:" widget.title2",hintStyle: regularTextStyle16.copyWith(color: MyColor.whiteColor)
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Card Number",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                                const SizedBox(height: 12,),
+                                TextField(
+                                  keyboardType: TextInputType.number,
+                                  decoration: InputDecoration(
+                                      focusedBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: BorderSide(
+                                              color: MyColor.greyColor.withAlpha(50)
+                                          )
+                                      ),
+                                      border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: BorderSide(
+                                              color: MyColor.greyColor.withAlpha(50)
+                                          )
+                                      ),
+                                      filled: true,
+                                      fillColor: MyColor.normalOrange,
+                                      hintText: " 3531 58545 5864",
+                                      hintStyle: regularTextStyle14.copyWith(
+                                          color: MyColor.whiteColor)),
                                 ),
-                              ),
+                              ],
+                            ),
+                            const SizedBox(height: 50,),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("Experie End",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                                      const SizedBox(height: 12,),
+                                      TextField(
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                            focusedBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                                borderSide: BorderSide(
+                                                    color: MyColor.greyColor.withAlpha(50)
+                                                )
+                                            ),
+                                            border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                                borderSide: BorderSide(
+                                                    color: MyColor.greyColor.withAlpha(50)
+                                                )
+                                            ),
+                                            filled: true,
+                                            fillColor: MyColor.normalOrange,
+                                            hintText: " 07/22",
+                                            hintStyle: regularTextStyle14.copyWith(
+                                                color: MyColor.whiteColor)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(width: 15,),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("CVV ",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                                      const SizedBox(height: 12,),
+                                      TextField(
+                                        keyboardType: TextInputType.number,
+                                        decoration: InputDecoration(
+                                            focusedBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                                borderSide: BorderSide(
+                                                    color: MyColor.greyColor.withAlpha(50)
+                                                )
+                                            ),
+                                            border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                                borderSide: BorderSide(
+                                                    color: MyColor.greyColor.withAlpha(50)
+                                                )
+                                            ),
+                                            filled: true,
+                                            fillColor: MyColor.normalOrange,
+                                            hintText: " 454",
+                                            hintStyle: regularTextStyle14.copyWith(
+                                                color: MyColor.whiteColor)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const  SizedBox(height: 20,),
+
+                            Row(
+                              children: [
+                                Checkbox(
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                                  checkColor: MyColor.eSeeAll,
+                                  activeColor: MyColor.whiteColor,
+                                  value: valuefirst,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      valuefirst = value!;
+                                    });
+                                  },
+                                ),
+                               Text("Sava as primary Card",style: regularTextStyle14,)
+                              ],
+                            ),
+                            const SizedBox(height: 30,),
+                            SizedBox(
+                              height: 60,
+                              width: 350,
+                              child: ElevatedButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (contex)=>PaymentConfirmPage()));
+                              },
+                                  style: ButtonStyle(
+                                    backgroundColor: WidgetStateProperty.all(MyColor.whiteColor),
+                                    shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))
+                                  ),
+                                  child: Text("CONTINUE",style: regularTextStyle16.copyWith(color: MyColor.eSeeAll),)),
                             )
                           ],
                         ),
                       );
+                      // return Padding(
+                      //   padding: const EdgeInsets.all(14.0),
+                      //   child: Column(
+                      //     crossAxisAlignment: CrossAxisAlignment.start,
+                      //     children: [
+                      //       const SizedBox(height: 20,),
+                      //       Expanded(
+                      //           child: Column(
+                      //             crossAxisAlignment: CrossAxisAlignment.start,
+                      //             children: [
+                      //               Text("Card Number",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                      //               const SizedBox(height: 10,),
+                      //               TextField(
+                      //                 decoration: InputDecoration(
+                      //                     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                     filled: true,
+                      //                     fillColor: MyColor.normalOrange,
+                      //                     hintText:" 3531 58545 5864",hintStyle: regularTextStyle14.copyWith(color: MyColor.whiteColor)
+                      //                 ),
+                      //               ),
+                      //             ],
+                      //           ),
+                      //
+                      //       ),
+                      //       const SizedBox(height: 10,),
+                      //       Row(
+                      //         children: [
+                      //           Expanded(
+                      //             child: Column(
+                      //               crossAxisAlignment: CrossAxisAlignment.start,
+                      //               children: [
+                      //                 Text("Card Number",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                      //                 const SizedBox(height: 10,),
+                      //                 TextField(
+                      //                   decoration: InputDecoration(
+                      //                       focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                       filled: true,
+                      //                       fillColor: MyColor.normalOrange,
+                      //                       hintText:" 3531 58545 5864",hintStyle: regularTextStyle14.copyWith(color: MyColor.whiteColor)
+                      //                   ),
+                      //                 ),
+                      //               ],
+                      //             ),
+                      //
+                      //           ),
+                      //           const SizedBox(width: 10,),
+                      //           Expanded(
+                      //             child: Column(
+                      //               crossAxisAlignment: CrossAxisAlignment.start,
+                      //               children: [
+                      //                 Text("Card Number",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),),
+                      //                 const SizedBox(height: 10,),
+                      //                 TextField(
+                      //                   decoration: InputDecoration(
+                      //                       focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide(color: MyColor.whiteColor)),
+                      //                       filled: true,
+                      //                       fillColor: MyColor.normalOrange,
+                      //                       hintText:" 3531 58545 5864",hintStyle: regularTextStyle14.copyWith(color: MyColor.whiteColor)
+                      //                   ),
+                      //                 ),
+                      //               ],
+                      //             ),
+                      //
+                      //           )
+                      //         ],
+                      //       ),
+                      //       const SizedBox(height: 10,),
+                      //
+                      //     ],
+                      //   ),
+                      // );
                     });
                 //Navigator.push(context, MaterialPageRoute(builder: (context)=>const PaymentConfirmPage()));
               },

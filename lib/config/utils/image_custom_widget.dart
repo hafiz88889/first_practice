@@ -47,6 +47,7 @@ static String scanner="assets/images/barcode-scanner.png";
 static String paypal="assets/images/paypal.png";
 static String masterCard="assets/images/mastercard.JPG";
 static String visaCard="assets/images/visacard.JPG";
+static String barCode="assets/images/barcod.png";
 
 
 }

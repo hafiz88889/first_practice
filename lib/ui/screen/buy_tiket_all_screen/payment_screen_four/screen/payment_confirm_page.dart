@@ -1,6 +1,7 @@
 import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
+import 'package:event/ui/screen/buy_tiket_all_screen/ticket_download_page/screen/ticket_download.dart';
 import 'package:flutter/material.dart';
 
 class PaymentConfirmPage extends StatelessWidget {
@@ -30,7 +31,7 @@ class PaymentConfirmPage extends StatelessWidget {
           height: 60,
           child: ElevatedButton(
               onPressed: (){
-                //Navigator.push(context, MaterialPageRoute(builder: (context)=>const PaymentConfirmPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const TicketDownload()));
               },
               style: ButtonStyle(
                   backgroundColor: WidgetStateProperty.all(MyColor.eTopBackColor),
@@ -40,7 +41,7 @@ class PaymentConfirmPage extends StatelessWidget {
               child: Text("CONFIRM",style: regularTextStyle16.copyWith(color: MyColor.whiteColor),)),
         ),
       ),
-      body: Padding(padding: EdgeInsets.all(16),
+      body: Padding(padding: const EdgeInsets.all(16),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +59,7 @@ class PaymentConfirmPage extends StatelessWidget {
             Text("Voucher",style: regularTextStyle18.copyWith(color: MyColor.blackColor),),
             const SizedBox(height: 10,),
             Container(
-              padding: EdgeInsets.all(22),
+              padding: const EdgeInsets.all(22),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 color: MyColor.backColor,
