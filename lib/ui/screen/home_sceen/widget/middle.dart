@@ -18,7 +18,7 @@ class Middle extends StatefulWidget {
   @override
   State<Middle> createState() => _MiddleState();
 }
-
+bool isSelect=false;
 class _MiddleState extends State<Middle> {
   @override
   Widget build(BuildContext context) {
@@ -52,11 +52,11 @@ class _MiddleState extends State<Middle> {
                 child: Container(
                   padding:const  EdgeInsets.all(10),
                   margin: const EdgeInsets.all(15),
-                  height: 50,
-                  width: 50,
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: MyColor.blackColor,
+                    color: MyColor.whiteColor.withAlpha(150),
                   ),
                   child: Image(image: AssetImage(MyImage.love)),
                 ),

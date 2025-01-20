@@ -10,6 +10,7 @@ import 'package:event/ui/screen/event_screen/screen_page/event_page.dart';
 import 'package:event/ui/screen/home_sceen/widget/choice_categori_widget.dart';
 import 'package:event/ui/screen/home_sceen/widget/middle.dart';
 import 'package:event/ui/screen/messanger_screen/screen_page/messanger_page.dart';
+import 'package:event/ui/screen/messanger_screen/widget/card_widget_page.dart';
 import 'package:event/ui/screen/profile_screen/profile_main/screen/profile_main.dart';
 import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: MyColor.backgroundColor,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         automaticallyImplyLeading: false,
         backgroundColor: MyColor.eTopBackColor,
         title: Row(
@@ -393,61 +395,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
            const SizedBox(height: 15,),
-            Container(
-              height: 90,
-              width: 387,
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: MyColor.whiteColor,
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.all(8),
-                    height: 70,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(image: AssetImage(MyImage.meetup),fit: BoxFit.cover)
-                    ),
-                  ),
-                  const SizedBox(width: 5,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 15,),
-                      Text("Desiner Meetup 2022",style: regularTextStyle16.copyWith(color: MyColor.blackColor),),
-                      const SizedBox(height: 15,),
-                      Row(
-                        children: [
-                          Text("03 Dec 2022",style: regularTextStyle14.copyWith(color: MyColor.searchText,fontSize: 10),),
-                          const SizedBox(width: 5,),
-                          SizedBox(
-                            height: 10,
-                            width: 10,
-                            child: CircleAvatar(
-                              backgroundColor: MyColor.eSeeAll,
-                            ),
-                          ),
-                          const SizedBox(width: 5,),
-                          Text("Gulsha,Dhaka",style: regularTextStyle14.copyWith(color: MyColor.searchText),),
-                        ],
-                      ),
-                    ],
-                  ),
-                 const Spacer(),
-                  Column(
-                    children: [
-                      const SizedBox(height: 15,),
-                      Text("\$10. Usd",style: regularTextStyle14.copyWith(color: MyColor.eSeeAll),),
-                      const SizedBox(height: 10,),
-                      Text("Join Now",style: regularTextStyle14.copyWith(color: MyColor.blackColor),),
-                    ],
-                  )
-                ],
-              ),
-            )
+            CardWidgetPage(image: MyImage.meetup, title1: "Desiner Meet up 2022", title2: "03 Oct 2022", title3: "Gulshan Dhaka", title4: "\$10 USD"),
+            CardWidgetPage(image: MyImage.meetup, title1: "Desiner Meet up 2022", title2: "03 Oct 2022", title3: "Gulshan Dhaka", title4: "\$10 USD"),
+            CardWidgetPage(image: MyImage.meetup, title1: "Desiner Meet up 2022", title2: "03 Oct 2022", title3: "Gulshan Dhaka", title4: "\$10 USD"),
           ],
         ),
       ),

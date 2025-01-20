@@ -35,7 +35,7 @@ class OnbrodingTwo extends StatelessWidget {
                 const Spacer(),
                 CircleAvatar(
                   radius: 5,
-                  backgroundColor: MyColor.whiteColor,),
+                  backgroundColor: MyColor.whiteColor.withAlpha(150),),
                 const SizedBox(width: 10,),
                 CircleAvatar(
                   radius: 5,
@@ -43,7 +43,7 @@ class OnbrodingTwo extends StatelessWidget {
                 const SizedBox(width: 10,),
                 CircleAvatar(
                   radius: 5,
-                  backgroundColor: MyColor.whiteColor,),
+                  backgroundColor: MyColor.whiteColor.withAlpha(150),),
                 const Spacer(),
                 TextButton(onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const OnBrodingThree ()));

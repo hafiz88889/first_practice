@@ -34,21 +34,34 @@ class _ConsertPageState extends State<ConsertPage> {
                   left: 30,
                   top: 40,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       InkWell(
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Icon(
-                          Icons.expand_circle_down_rounded,
-                          color: MyColor.whiteColor,
-                          size: 40,
+                        child: Container(
+                          padding: const EdgeInsets.all(8),
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: MyColor.whiteColor.withAlpha(150),
+                          ),
+                          child: Image(image: AssetImage(MyImage.backArrowIcon),color: MyColor.whiteColor,height: 15,width: 15,),
                         ),
                       ),
-                      const SizedBox(
-                        width: 250,
+                      const SizedBox(width: 240,),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: MyColor.whiteColor.withAlpha(150),
+                        ),
+                        child: Image(image: AssetImage(MyImage.love),color: MyColor.redColor,height: 15,width: 15,),
                       ),
-                      Image(image: AssetImage(MyImage.love),height: 30,width: 30,)
                     ],
                   ),
                 ),

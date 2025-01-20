@@ -62,7 +62,7 @@ class _CardWidgetPageState extends State<CardWidgetPage> {
                     ),
                   ),
                   const SizedBox(width: 5,),
-                  Text(widget.title3,style: regularTextStyle14.copyWith(color: MyColor.searchText),),
+                  Text(widget.title3,style: regularTextStyle14.copyWith(color: MyColor.searchText,fontSize: 10),)
                 ],
               ),
             ],
