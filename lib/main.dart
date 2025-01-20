@@ -1,4 +1,5 @@
 import 'package:event/ui/screen/home_sceen/screen_page/home_page.dart';
+import 'package:event/ui/screen/splash_screen/splash_screen/splash_page.dart';
 import 'package:flutter/material.dart';
 
 import 'ui/screen/chatting_page_one/screen_page/page_one.dart';
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Booking Event",
-      home: RegPage(),
+      home: SplashScreen(),
     );
   }
 }

@@ -43,5 +43,7 @@ class MyColor{
   static Color backColor = const Color(0xffF0F0EE);
   static Color normalOrange = const Color(0xffF87723);
   static Color bottomSheetColor = const Color(0xffF86B0F);
+  static Color splash = const Color(0xffFBF6F3);
+  static Color splashBack = const Color(0xffF76C11);
 
 }

@@ -1,9 +1,16 @@
 import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
+import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_one_and_two/screen/tiket_page.dart';
+import 'package:event/ui/screen/buy_tiket_all_screen/ticket_download_page/screen/ticket_download.dart';
+import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
 import 'package:event/ui/screen/consert_screen/screen/consert_page.dart';
+import 'package:event/ui/screen/date_picker/date_picker_screen/date_picker_page.dart';
+import 'package:event/ui/screen/event_screen/screen_page/event_page.dart';
 import 'package:event/ui/screen/home_sceen/widget/choice_categori_widget.dart';
 import 'package:event/ui/screen/home_sceen/widget/middle.dart';
+import 'package:event/ui/screen/messanger_screen/screen_page/messanger_page.dart';
+import 'package:event/ui/screen/profile_screen/profile_main/screen/profile_main.dart';
 import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
@@ -27,9 +34,14 @@ class _HomePageState extends State<HomePage> {
           children: [
             Stack(
               children: [
-                  CircleAvatar(
-                  backgroundImage: AssetImage(MyImage.profile),
-                ),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProfileMain()));
+                    },
+                    child: CircleAvatar(
+                    backgroundImage: AssetImage(MyImage.profile),
+                                    ),
+                  ),
                 Positioned(
                   top: 25,
                   left: 25,
@@ -86,6 +98,137 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          padding: const EdgeInsets.all(10),
+          children: [
+            Column(
+              children: [
+                const SizedBox(height: 50,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    InkWell(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(Icons.close,size: 30,)),
+                  ],
+                ),
+                Row(
+                  children: [
+                   Container(
+                     height: 70,
+                     width: 70,
+                     decoration: BoxDecoration(
+                       border: Border.all(color: MyColor.eSeeAll,width: 3),
+                       shape: BoxShape.circle,
+                       color: MyColor.eSeeAll,
+                       image: DecorationImage(image: AssetImage(MyImage.profile),fit: BoxFit.cover)
+                     ),
+                   ),
+                    const SizedBox(width: 10,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'MD Rafi Islam',
+                          style: regularTextStyle16.copyWith(color: MyColor.blackColor),
+                        ),
+                        Text(
+                          'rafiisiamapon4@gmail.com',
+                          style: regularTextStyle14.copyWith(color: MyColor.blackColor),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 50,),
+            Container(
+              margin: const EdgeInsets.only(left: 50),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: const Icon(Icons.person),
+                    title: const Text('My Profile'),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProfileMain()));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.message),
+                    title: const Text('Message'),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const ChattingPageOne()));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.calendar_today),
+                    title: const Text('Calendar'),
+                    onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const DatePickerPage()));
+                    },
+                  ),
+                  ListTile(
+                    leading:  Image(image: AssetImage(MyImage.ticket),height: 35,width: 35,),
+                    title: const Text('Ticket'),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const TicketDownload()));
+                    },
+                  ),
+                  ListTile(
+                    leading:  Image(image: AssetImage(MyImage.ticket),height: 35,width: 35,),
+                    title: const Text("Buy Ticket"),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const TicketPage()));
+                    },
+                  ),
+                  ListTile(
+                    leading:  Image(image: AssetImage(MyImage.banner2),height: 35,width: 35,),
+                    title: const Text('Event'),
+                    onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomTabBarExample()));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.help),
+                    title: const Text('Helps & FAQs'),
+                    onTap: () {
+                      // Handle Helps & FAQs tap
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.logout),
+                    title: const Text('Sign Out'),
+                    onTap: () {
+                      // Handle Sign Out tap
+                    },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox(
+                      height: 50,
+                      child: ElevatedButton(onPressed: (){},
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all(MyColor.eTopBackColor),
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                          ),
+                          child: Row(children: [
+                        Icon(Icons.workspace_premium,color: MyColor.whiteColor,size: 30,),
+                        const SizedBox(width: 10,),
+                        Text("Upgrade Pro",style: regularTextStyle14.copyWith(color: MyColor.whiteColor),)
+                      ],)),
+                    ),
+                  )
+
+                ],
+              ),
+            )
           ],
         ),
       ),

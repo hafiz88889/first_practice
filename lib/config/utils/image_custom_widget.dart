@@ -48,6 +48,11 @@ static String paypal="assets/images/paypal.png";
 static String masterCard="assets/images/mastercard.JPG";
 static String visaCard="assets/images/visacard.JPG";
 static String barCode="assets/images/barcod.png";
+static String logo="assets/images/logo.JPG";
+static String spBanner1="assets/images/spBanner.JPG";
+static String spBanner2="assets/images/spBanner2.JPG";
+static String spBanner3="assets/images/spBanner3.JPG";
+static String flagOne="assets/images/flag1.JPG";
 
 
 }
