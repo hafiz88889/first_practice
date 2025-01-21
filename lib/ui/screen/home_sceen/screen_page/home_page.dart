@@ -371,26 +371,11 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  ChoiceCategoriWidget(
-                      image: MyImage.musi1c,
-                      title: "Design",
-                      butonColor: MyColor.eSeeAll
-                  ),
-                  ChoiceCategoriWidget(
-                      image: MyImage.art,
-                      title: "Art",
-                      butonColor: MyColor.whiteColor
-                  ),
-                  ChoiceCategoriWidget(
-                      image: MyImage.sports,
-                      title: "Sports",
-                      butonColor: MyColor.whiteColor
-                  ),
-                  ChoiceCategoriWidget(
-                      image: MyImage.music,
-                      title: "Music",
-                      butonColor: MyColor.whiteColor
-                  ),
+                  ChoiceByCategories(image: MyImage.musi1c, title: "Design", butonColor: MyColor.eSeeAll),
+                  ChoiceByCategories(image: MyImage.art, title: "Art", butonColor: MyColor.whiteColor),
+                  ChoiceByCategories(image: MyImage.sports, title: "Sports", butonColor: MyColor.whiteColor),
+                  ChoiceByCategories(image: MyImage.music, title: "Music", butonColor: MyColor.whiteColor),
+                  ChoiceByCategories(image: MyImage.art, title: "Design", butonColor: MyColor.whiteColor),
                 ],
               ),
             ),

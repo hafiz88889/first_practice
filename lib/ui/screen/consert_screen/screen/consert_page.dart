@@ -4,6 +4,7 @@ import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
 import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_one_and_two/screen/tiket_page.dart';
 import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
+import 'package:event/ui/screen/organizer_profile/Screen/organizer_page.dart';
 import 'package:flutter/material.dart';
 
 class ConsertPage extends StatefulWidget {
@@ -342,9 +343,14 @@ class _ConsertPageState extends State<ConsertPage> {
                                           children: [
                                             Stack(
                                               children: [
-                                                CircleAvatar(
-                                                  backgroundImage: AssetImage(
-                                                      MyImage.profile),
+                                                InkWell(
+                                                  onTap:(){
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> OrganizerProfile()));
+                                                    },
+                                                  child: CircleAvatar(
+                                                    backgroundImage: AssetImage(
+                                                        MyImage.profile),
+                                                  ),
                                                 ),
                                                 Positioned(
                                                   top: 27,
@@ -683,9 +689,14 @@ class _ConsertPageState extends State<ConsertPage> {
                                                                   children: [
                                                                     Stack(
                                                                       children: [
-                                                                        CircleAvatar(
-                                                                          backgroundImage:
-                                                                              AssetImage(MyImage.profile),
+                                                                        InkWell(
+                                                                          onTap:(){
+                                                                            Navigator.push(context, MaterialPageRoute(builder: (context)=> OrganizerProfile()));
+                                                                          },
+                                                                          child: CircleAvatar(
+                                                                            backgroundImage:
+                                                                                AssetImage(MyImage.profile),
+                                                                          ),
                                                                         ),
                                                                         Positioned(
                                                                           top: 27,

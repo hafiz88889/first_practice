@@ -1,7 +1,6 @@
 import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
-import 'package:event/ui/screen/home_sceen/widget/choice_categori_widget.dart';
 import 'package:event/ui/screen/profile_screen/profile_edite/screen/edit_screen.dart';
 import 'package:event/ui/screen/profile_screen/profile_main/widget/interest_widget.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +80,7 @@ class ProfileMain extends StatelessWidget {
                 child: Text("MD Rafi Islam",style: regularTextStyle18.copyWith(color: MyColor.blackColor),)),
             const SizedBox(height: 30,),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
             child:Column(
               children: [
                 Row(

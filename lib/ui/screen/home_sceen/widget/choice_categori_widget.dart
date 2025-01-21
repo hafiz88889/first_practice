@@ -1,38 +1,37 @@
-import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:flutter/material.dart';
 
-class ChoiceCategoriWidget extends StatefulWidget {
+class ChoiceByCategories extends StatefulWidget {
   final String image;
   final String title;
   final Color butonColor;
-  const ChoiceCategoriWidget({super.key,
-  required this.image,
+  const ChoiceByCategories({super.key,
+    required this.image,
     required this.title,
     required this.butonColor,
   });
 
   @override
-  State<ChoiceCategoriWidget> createState() => _ChoiceCategoriWidgetState();
+  State<ChoiceByCategories> createState() => _ChoiceByCategoriesState();
 }
 
-class _ChoiceCategoriWidgetState extends State<ChoiceCategoriWidget> {
+class _ChoiceByCategoriesState extends State<ChoiceByCategories> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: EdgeInsets.all(5),
+      padding:const  EdgeInsets.all(5),
       height: 50,
-      width: 120,
-      margin: const EdgeInsets.only(left: 10),
+      width: 110,
+      margin: const EdgeInsets.only(left: 10,bottom: 10),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: widget.butonColor,
+        borderRadius: BorderRadius.circular(25),
+        color: widget.butonColor,
       ),
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             height: 40,
             width: 40,
             decoration: BoxDecoration(

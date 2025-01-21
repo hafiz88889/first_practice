@@ -93,7 +93,6 @@ class _CustomTabBarExampleState extends State<CustomTabBarExample>
               ],
             ),
           ),
-          // TabBarView
           Expanded(
             child: TabBarView(
               controller: _tabController,
