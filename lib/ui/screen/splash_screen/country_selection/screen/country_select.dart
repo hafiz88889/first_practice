@@ -2,6 +2,8 @@ import 'package:event/config/utils/image_custom_widget.dart';
 import 'package:event/config/utils/my_color.dart';
 import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/home_sceen/screen_page/home_page.dart';
+import 'package:event/ui/screen/registation_screen/screen_page/reg_page.dart';
+import 'package:event/ui/screen/signin_screen/screen_page/signin_page.dart';
 import 'package:event/ui/screen/splash_screen/country_selection/widget/widget.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +40,7 @@ class _CountrySelectState extends State<CountrySelect> {
         child: SizedBox(
           height: 50,
           child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const RegPage()));
           } ,
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(MyColor.eTopBackColor),

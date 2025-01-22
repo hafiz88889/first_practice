@@ -5,13 +5,16 @@ import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_one_and_two/
 import 'package:event/ui/screen/buy_tiket_all_screen/ticket_download_page/screen/ticket_download.dart';
 import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
 import 'package:event/ui/screen/consert_screen/screen/consert_page.dart';
+import 'package:event/ui/screen/create_event_screen/screen/create_event.dart';
 import 'package:event/ui/screen/date_picker/date_picker_screen/date_picker_page.dart';
 import 'package:event/ui/screen/event_screen/screen_page/event_page.dart';
 import 'package:event/ui/screen/home_sceen/widget/choice_categori_widget.dart';
 import 'package:event/ui/screen/home_sceen/widget/middle.dart';
 import 'package:event/ui/screen/messanger_screen/screen_page/messanger_page.dart';
 import 'package:event/ui/screen/messanger_screen/widget/card_widget_page.dart';
+import 'package:event/ui/screen/notification_screen/screen_one/notification_page_one.dart';
 import 'package:event/ui/screen/profile_screen/profile_main/screen/profile_main.dart';
+import 'package:event/ui/screen/search_and_filter_screen/page_one/screen/screen_page.dart';
 import 'package:event/ui/screen/tab_controller/tab_control/tab_control_page.dart';
 import 'package:flutter/material.dart';
 
@@ -198,10 +201,24 @@ class _HomePageState extends State<HomePage> {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.help),
-                    title: const Text('Helps & FAQs'),
+                    leading: const Icon(Icons.notifications_none_outlined),
+                    title: const Text('Notifications'),
                     onTap: () {
-                      // Handle Helps & FAQs tap
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationPageOne()));
+                    },
+                  ),
+                  ListTile(
+                    leading:  Image(image: AssetImage(MyImage.banner),height: 35,width: 35,),
+                    title: const Text('Create Event'),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const CreateEvent()));
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.search),
+                    title: const Text('Search and Filter '),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const FilterPageOne()));
                     },
                   ),
                   ListTile(

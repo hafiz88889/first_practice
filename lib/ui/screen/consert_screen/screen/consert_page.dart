@@ -4,6 +4,7 @@ import 'package:event/config/utils/text_style.dart';
 import 'package:event/ui/screen/booking_screen/screen/widget/top_circle_widget.dart';
 import 'package:event/ui/screen/buy_tiket_all_screen/payment_screen_one_and_two/screen/tiket_page.dart';
 import 'package:event/ui/screen/chatting_page_one/screen_page/page_one.dart';
+import 'package:event/ui/screen/invite_friend_screen/screen/invite_page.dart';
 import 'package:event/ui/screen/organizer_profile/Screen/organizer_page.dart';
 import 'package:flutter/material.dart';
 
@@ -327,17 +328,17 @@ class _ConsertPageState extends State<ConsertPage> {
                                             const SizedBox(
                                               width: 70,
                                             ),
-                                            Text(
-                                              "VIEW ALL / INVITE",
-                                              style:
-                                                  regularTextStyle14.copyWith(
-                                                      color: MyColor.eSeeAll,
-                                                      fontSize: 10),
-                                            )
+                                            TextButton(onPressed: (){
+                                            showModalBottomSheet(
+                                                isScrollControlled: true,
+                                                context: context, builder: (BuildContext contex){
+                                              return const InvitePage();
+                                            });
+                                            }, child: Text("VIEW ALL/INVITE",style: regularTextStyle14.copyWith(fontSize: 10,color: MyColor.eSeeAll),))
                                           ],
                                         ),
                                         const SizedBox(
-                                          height: 25,
+                                          height: 15,
                                         ),
                                         Row(
                                           children: [
@@ -423,7 +424,7 @@ class _ConsertPageState extends State<ConsertPage> {
                                           ],
                                         ),
                                         const SizedBox(
-                                          height: 25,
+                                          height: 15,
                                         ),
                                         Text(
                                           "Description",
